@@ -1,4 +1,4 @@
-import React, { Component } from '.react';
+import React, { Component } from 'react';
 import InventoryList from './InventoryList';
 import Warehouses from './Warehouses';
 import WarehouseDetail from './WarehouseDetail';
