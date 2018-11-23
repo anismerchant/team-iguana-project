@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const videoArray = require('./inventory_list_data.json');
+const inventory_list_data = require('./inventory_list_data.json');
+const warehouse_data = require('./warehouse_data.json');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

@@ -1,0 +1,30 @@
+[
+    {
+        "warehouse_id": 1,
+        "address": "123 Main Street West Toronto, Canada M6J 2H2",
+        "contact": "Clark Kent, Warehouse Manager +1 416 678 2345 superman@icecreams.com",
+        "type": "Dairy"
+
+    },
+    {
+        "warehouse_id": 2,
+        "address": "456 Pine Street Montreal, Canada H2W 1S3",
+        "contact": "Bruce Wayne, Warehouse Manager +1 514 923 1106 batman@icecreams.com",
+        "type": "Sorbet"
+
+    },
+    {
+        "warehouse_id": 3,
+        "address": "789 Elm Street Ottawa, Canada K2M 9N5",
+        "contact": "Hal Jordan, Warehouse Manager +1 613 413 0093 greenlantern@icecreams.com",
+        "type": "Frozen Yogurt"
+
+    },
+    {
+        "warehouse_id": 4,
+        "address": "123 Stephen Street Kingston, Canada K7K 2C6",
+        "contact": "Wally West, Warehouse Manager +1 343 923 1106 flash@icecreams.com",
+        "type": "No Added Sugar"
+
+    }
+]
