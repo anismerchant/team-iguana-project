@@ -27,3 +27,9 @@ app.use(express.static('public'));
 // TODO: POST Warehouse
 
 // TODO: DELETE Item
+
+
+// Server Listening...
+app.listen(8080, () => {
+    console.log('Server running on 8080...');
+});
