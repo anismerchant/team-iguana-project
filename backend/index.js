@@ -1,8 +1,14 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+<<<<<<< HEAD
 const warehouses = require('warehouses');
 const inventoryList = require('inventoryList')
+=======
+const inventory_list_data = require('./inventory_list_data.json');
+const warehouse_data = require('./warehouse_data.json');
+
+>>>>>>> 858e5f774b98330a55f02aeaf5582ecb7e90303b
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
