@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles.css';
 import TopBar from './TopBar';
 import Sidebar from './Sidebar';
 import Main from './Main';
@@ -11,7 +11,7 @@ export default class App extends Component {
       <div className="App">
         <TopBar />
         <Sidebar />
-        <Main />
+        {/* <Main /> */}
       </div>
     );
   }
