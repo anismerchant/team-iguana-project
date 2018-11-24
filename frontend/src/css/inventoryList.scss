@@ -12,18 +12,31 @@
     background-color: #F7F7F7;
     width: 100vw;
     height: 100vh;
-    border: 1px solid red;
+   
     
 
     .inventoryList--heading-container {
         display: flex;
         justify-content: space-between;
-        border: 1px solid red;
         width: 75%;
         position: relative;
         top: 10%;
         left: 15%;
+        padding: 0 2% 2% 2%;
         
+        .inventoryList--heading {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+        }
+        .inventoryList--filter {
+            display: flex;
+            flex-direction: column-reverse;
+            h2 {
+                font-size: 1rem;
+            }
+        }
     }
     .inventoryList--main-container{
         border: 1px solid red;

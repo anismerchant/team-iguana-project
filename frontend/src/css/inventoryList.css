@@ -12,7 +12,6 @@
   background-color: #F7F7F7;
   width: 100vw;
   height: 100vh;
-  border: 1px solid red;
 }
 
 .inventoryList__container .inventoryList--heading-container {
@@ -22,11 +21,29 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 1px solid red;
   width: 75%;
   position: relative;
   top: 10%;
   left: 15%;
+  padding: 0 2% 2% 2%;
+}
+
+.inventoryList__container .inventoryList--heading-container .inventoryList--heading h1 {
+  font-size: 1.8rem;
+}
+
+.inventoryList__container .inventoryList--heading-container .inventoryList--filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.inventoryList__container .inventoryList--heading-container .inventoryList--filter h2 {
+  font-size: 1rem;
 }
 
 .inventoryList__container .inventoryList--main-container {

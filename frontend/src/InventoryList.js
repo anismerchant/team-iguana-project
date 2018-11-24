@@ -8,10 +8,10 @@ export default class InventoryList extends React.Component {
             
             <div className="inventoryList__container">
                 <div className="inventoryList--heading-container">
-                    <div className="InventoryList--heading">
+                    <div className="inventoryList--heading">
                         <h1 >Inventory</h1>
                     </div>
-                    <div className="InventoryList--filter">
+                    <div className="inventoryList--filter">
                         <h2 alt="filter">Filter</h2>
                     </div>
                 </div>
