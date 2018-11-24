@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import './App.css';
+import './css/inventoryList.css';
 import TopBar from './TopBar';
 import Sidebar from './Sidebar';
 import Main from './Main';
