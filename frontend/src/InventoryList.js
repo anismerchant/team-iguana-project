@@ -53,8 +53,6 @@ export default class InventoryList extends React.Component {
                         <button className="inventoryList__form--delete-product">Delete</button>
                     </div>
                 </div>
-                    
-               
             </div>
        
         );

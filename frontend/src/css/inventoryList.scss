@@ -16,16 +16,16 @@
     width: 85vw;
     height: 100vh;
     margin-left: 15vw;
-    margin-top: 15vh;
+    margin-top: 10vh;
     font-family: $inventory-font-family;
    
     .inventoryList--heading-container {
         display: flex;
         justify-content: space-between;
-        width: 75%;
+        width: 90%;
         position: relative;
-        left: 15%;
-        padding: 0 2% 2% 2%;
+        left: 5%;
+        padding: 5% 2% 2% 2%;
         
         .inventoryList--heading {
             h1 {
@@ -38,22 +38,38 @@
             display: flex;
             flex-direction: column-reverse;
             h2 {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 font-weight: bold;
                 color: #004892;
             }
         }
     }
     .inventoryList--main-container{
-        width: 75%;
+        width: 90%;
         height: 75vh;
         position: relative;
-        left: 15%;
+        left: 5%;
         background: #FFF;
 
         .inventoryList__form--product-heading {
             display: flex;
-            
+            justify-content: space-around;
+            font-size: 0.6rem;
+            width: 90%;
+            padding: 3% 0;
+
+            .inventoryList__form--item {
+                width: 20%;
+            }
+            .inventoryList__form--lastOrdered{
+                width: 15%;
+            }
+            .inventoryList__form--location{
+                width: 15%;
+            }
+            .inventoryList__form--quantity {
+                width: 15%;
+            }
         }
         .InventoryList__form--product-details {
             display: flex;
