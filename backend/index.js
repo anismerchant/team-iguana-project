@@ -20,7 +20,11 @@ app.use(express.static('public'));
 app.get('/warehouses', (req,res)=>{
     res.json(warehouse_data);
 })
+
 // TODO: GET All Inventory
+app.get('/inventory', (req, res) => {
+    res.json(inventory_list_data);
+})
 
 // TODO: GET Warehouse Inventory
 
