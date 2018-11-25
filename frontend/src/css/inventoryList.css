@@ -8,10 +8,20 @@
           box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("./typography/Avenir Next.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .inventoryList__container {
   background-color: #F7F7F7;
-  width: 100vw;
+  width: 85vw;
   height: 100vh;
+  margin-left: 15vw;
+  margin-top: 15vh;
+  font-family: "Avenir Next", sans-serif;
 }
 
 .inventoryList__container .inventoryList--heading-container {
@@ -23,13 +33,13 @@
           justify-content: space-between;
   width: 75%;
   position: relative;
-  top: 10%;
   left: 15%;
   padding: 0 2% 2% 2%;
 }
 
 .inventoryList__container .inventoryList--heading-container .inventoryList--heading h1 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .inventoryList__container .inventoryList--heading-container .inventoryList--filter {
@@ -43,28 +53,26 @@
 }
 
 .inventoryList__container .inventoryList--heading-container .inventoryList--filter h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #004892;
 }
 
 .inventoryList__container .inventoryList--main-container {
-  border: 1px solid red;
   width: 75%;
   height: 75vh;
   position: relative;
-  top: 10%;
   left: 15%;
   background: #FFF;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .inventoryList__container .inventoryList--main-container .InventoryList__form--product-details {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
