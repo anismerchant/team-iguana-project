@@ -16,14 +16,32 @@ app.use(function(req, res, next) {
 
 app.use(express.static('public'));
 
-// TODO: GET All Warehouses
+//GET All Warehouses
+app.get('/warehouses', (req,res)=>{
+    res.json(warehouse_data);
+})
 
 // TODO: GET All Inventory
+app.get('/inventory', (req, res) => {
+    res.json(inventory_list_data);
+})
 
 // TODO: GET Warehouse Inventory
 
-// TODO: GET Inventory Item
-
+//GET Inventory Item
+app.get('/inventory/:id', (req,res) => {
+    const requestedItem = Number(req.params.id);
+    const itemList = inventory_list_data.find(item => item.id === requestedItem);
+    
+    if(itemList !== null)
+    {
+        res.json(itemList);
+    }
+    else
+    {
+        res.send({msg:'Item Not Found 404'});
+    }
+})
 // TODO: POST Warehouse
 
 // TODO: DELETE Item
