@@ -44,6 +44,24 @@ app.get('/inventory/:id', (req,res) => {
 })
 // TODO: POST Warehouse
 
+// Create an endpoint
+app.post('/warehouses/:id', (req, res) => {
+
+    // Create a new object with data received in POST request 
+    let newObject = {
+        "warehouse_id": (Number(req.body.warehouse_id)),
+        "address": req.body.address,
+        "contact": req.body.contact,
+        "type": req.body.type
+    }
+
+    // Add new post request to warehouse_data json file 
+    //   and return the newly created warehouse back to the front-end
+    warehouse_data.push(newObject);
+    res.json(newObject);
+    
+   
+});
 // TODO: DELETE Item
 
 
