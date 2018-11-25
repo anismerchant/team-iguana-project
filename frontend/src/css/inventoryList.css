@@ -15,6 +15,7 @@
   font-style: normal;
 }
 
+/* INVENTORY SECTION */
 .inventoryList__container {
   background-color: #F7F7F7;
   width: 85vw;
@@ -73,29 +74,107 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 0.6rem;
-  width: 90%;
+  width: 100%;
   padding: 3% 0;
 }
 
-.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--item {
-  width: 20%;
-}
-
-.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--lastOrdered {
-  width: 15%;
-}
-
-.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--location {
-  width: 15%;
-}
-
-.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--quantity {
-  width: 15%;
-}
-
-.inventoryList__container .inventoryList--main-container .InventoryList__form--product-details {
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--item {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--lastOrdered {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--location {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--quantity {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .spaceBlock {
+  width: 10%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 0.6rem;
+  width: 100%;
+  padding: 3% 0;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container .inventoryList__form--product {
+  color: #004892;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container .inventoryList__form--product-desc {
+  font-weight: normal;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--date-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--date-container h3 {
+  font-weight: normal;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--city-province-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--city-province-container h3 {
+  font-weight: normal;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-number-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-number-container h3 {
+  font-weight: normal;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-in-stock-container h3 {
+  font-weight: normal;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product {
+  width: 10%;
+  background-color: #FFF;
+  border: none;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.7rem;
 }
 /*# sourceMappingURL=inventoryList.css.map */
