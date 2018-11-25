@@ -131,14 +131,13 @@
             .inventoryList__form--delete-product {
                 width: 10%;
                 font-family: $inventory-font-family;
-                font-size: 0.7rem;
+                font-size: 0.9rem;
                 background-color: Transparent;
                 background-repeat: no-repeat;
                 border: none;
                 overflow: hidden;
                 outline:none;
                 opacity: .6;
-                font-size: 0.9rem;
                 &:focus {
                     outline: 0;
                 }
@@ -146,7 +145,7 @@
                 &:hover {
                     opacity: 1;
                     text-shadow: 0 0 1px #f70d5b;
-                    transform: scale(1.04);
+                    transform: scale(1.08);
                 }
             }
         }
