@@ -71,7 +71,7 @@ export default class InventoryList extends React.Component {
                                 <h3 className="inventoryList__form--in-stock">In Stock</h3>
                             </div>
                         </div>
-                        <button className="inventoryList__form--delete-product">Delete</button>                        
+                        <button className="inventoryList__form--delete-product">x</button>                        
                     </div>
                 </div>
             </div>

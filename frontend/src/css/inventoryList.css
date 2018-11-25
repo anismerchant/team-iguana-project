@@ -172,9 +172,29 @@
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product {
   width: 10%;
-  background-color: #FFF;
-  border: none;
   font-family: "Avenir Next", sans-serif;
   font-size: 0.7rem;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  opacity: .6;
+  font-size: 0.9rem;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product:focus {
+  outline: 0;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product:hover {
+  opacity: 1;
+  text-shadow: 0 0 1px #f70d5b;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 /*# sourceMappingURL=inventoryList.css.map */
