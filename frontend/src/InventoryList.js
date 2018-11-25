@@ -12,7 +12,7 @@ export default class InventoryList extends React.Component {
     }
 
     // Fetch all inventory list once component mounts:
-    componentDidMount() {
+    componentDidMount(prevProps, prevState) {
         fetch(baseUrl + inventoryListPath)
             .then(res => {return res.json();})
             .then(data => {return this.setState({inventory: data})})
@@ -24,17 +24,17 @@ export default class InventoryList extends React.Component {
             <div className="inventoryList__container">
                 <div className="inventoryList--heading-container">
                     <div className="inventoryList--heading">
-                        <h1 >Inventory</h1>
+                        <h1>Inventory</h1>
                     </div>
                     <div className="inventoryList--filter">
-                        <h2 alt="filter">Filter</h2>
+                        <h2>Filter</h2>
                     </div>
                 </div>
                 <div className="inventoryList--main-container">
                     <div className="inventoryList__form--product-heading">
                         <div className="inventoryList__form--product-heading-group"> 
                             <div className="inventoryList__form--item">
-                                <h3 >ITEM</h3>
+                                <h3>ITEM</h3>
                             </div>
                             <div className="inventoryList__form--lastOrdered">
                                 <h3>LAST ORDERED</h3>
