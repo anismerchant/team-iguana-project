@@ -1,6 +1,23 @@
 import React from 'react';
 
+/* setup const for baseUrl and inventory path */
+const baseUrl = 'http:localhost:8080';
+const inventoryListPath = '/inventory';
+
 export default class InventoryList extends React.Component {
+    
+    // Monitor State
+    state = {
+        inventory: []
+    }
+
+    // Fetch all inventory list once component mounts:
+    componentDidMount() {
+        fetch(baseUrl + inventoryListPath)
+            .then(res => {return res.json();})
+            .then(data => {return this.setState({inventory: data})})
+            .catch((err) => {console.log(err)});
+    }
 
     render() {
         return (
