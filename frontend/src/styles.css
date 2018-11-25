@@ -1,4 +1,16 @@
+@font-face {
+  font-family: 'Avenir Next';
+  src: local("Avenir Next"), url("./Assets/Typography/Avenir Next.ttc");
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: Avenir Next;
+}
+
 .sidebar {
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,9 +21,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 250px;
-  height: 99vh;
-  background-color: #004892;
+  height: 100%;
+  background-color: #003B77;
+}
+
+.sidebar__topLogo {
+  margin-top: 30px;
+  height: 13px;
+  width: 93px;
 }
 
 .sidebar__links {
@@ -22,6 +43,207 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 250px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.sidebar__links--link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 250px;
+  height: 80px;
+  padding: 20px 0px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Avenir Next;
+  color: #CACACA;
+  border-radius: 3px;
+  background-color: #003B77;
+  border: #003B77 solid thin;
+}
+
+.sidebar__links--link:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  height: 80px;
+  padding: 20px 0px;
+  font-size: 14px;
+  font-family: Avenir Next;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background-color: #004892;
+  border: #004892 solid thin;
+  outline: none;
+}
+
+.sidebar__links--img {
+  margin: 0 30px 0 30px;
+  height: 24px;
+  width: 24px;
+}
+
+.sidebar__links--img:hover {
+  margin: 0 30px 0 30px;
+  height: 24px;
+  width: 24px;
+}
+
+.sidebar__bottomVersionText {
   color: white;
+  font-weight: 400;
+  margin: 40px;
+}
+
+.topbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 250px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  border: none;
+}
+
+.topbar__searchBox {
+  font-family: AvenirNext-Regular;
+  margin-left: 70px;
+  background-color: #F7F7F7;
+  border-radius: 2px;
+  border: #DEDEDE solid medium;
+}
+
+.topbar__searchBox--input {
+  background-color: #F7F7F7;
+  height: 40px;
+  width: 381px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+
+@media (max-width: 1420px) {
+  .topbar__searchBox--input {
+    width: 300px;
+    display: inline;
+  }
+}
+
+@media (max-width: 975px) {
+  .topbar__searchBox--input {
+    width: 100px;
+    display: inline;
+  }
+}
+
+.topbar__searchBox--input::-webkit-input-placeholder {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input:-ms-input-placeholder {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input::-ms-input-placeholder {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input::placeholder {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input:hover::-webkit-input-placeholder {
+  color: black;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input:hover:-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input:hover::-ms-input-placeholder {
+  color: black;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--input:hover::placeholder {
+  color: black;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.topbar__searchBox--img {
+  vertical-align: middle;
+  padding-right: 20px;
+  width: 20px;
+  height: 25px;
+}
+
+.topbar__searchBox:hover {
+  margin-left: 70px;
+  background-color: #F7F7F7;
+  border-radius: 2px;
+  border: #004892  solid medium;
+}
+
+.topbar__searchBox:hover--input:hover {
+  background-color: #F7F7F7;
+  color: black;
+  height: 40px;
+  width: 381px;
+  border: none;
+  outline: none;
+  padding-left: 20px;
+}
+
+.topbar__rightBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 45%;
+  margin-right: 20px;
+}
+
+@media (max-width: 1420px) {
+  .topbar__rightBox {
+    margin-left: 10%;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 975px) {
+  .topbar__rightBox {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.topbar__rightBox--userImg {
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  width: 36px;
+  height: 36px;
 }
 /*# sourceMappingURL=styles.css.map */
