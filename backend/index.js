@@ -43,5 +43,7 @@ app.get('/inventory/:id', (req,res) => {
 // TODO: DELETE Item
 
 
-app.listen(8080, () => 
-{console.log('Warehouse Server running on 8080')})
+// Server Listening...
+app.listen(8080, () => {
+    console.log('Server running on 8080...');
+});
