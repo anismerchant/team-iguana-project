@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'Avenir Next';
+    src: local('Avenir Next'),
+        url('./Assets/Typography/Avenir\ Next.ttc');
+    font-style: normal;
+}
+
 body{
 margin: 0;
-// display: flex;
-// flex-flow: wrap;
+font-family: Avenir Next;
 }
 
 .sidebar{
@@ -9,44 +15,173 @@ margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // width: 250px;
-    width: 18%;
+    justify-content: space-between;
+    width: 250px;
     height: 100%;
-    background-color: #004892;
+    background-color: #003B77;
+    
+    &__topLogo {
+        margin-top: 30px;
+        height: 13px;
+        width: 93px;
+    }
 
     &__links {
         display: flex;
         flex-direction: column;
-        color: white;
+        height: 250px;
+        margin-top: 50px;
+        margin-bottom: 100px;
+
+        &--link{
+            display: flex;
+            align-items: center;
+            width: 250px;
+            height: 80px;
+            padding: 20px 0px;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: Avenir Next;
+            color: #CACACA;
+            border-radius: 3px;
+            background-color: #003B77;
+            border: #003B77 solid thin;
+        }
+
+        &--link:hover{
+            display: flex;
+            width: 250px;
+            height: 80px;
+            padding: 20px 0px;
+            font-size: 14px;
+            font-family: Avenir Next;
+            color: #FFFFFF;
+            border-radius: 3px;
+            background-color: #004892;
+            border: #004892 solid thin;
+            outline: none;
+        }
+
+        &--img {
+            margin: 0 30px 0 30px;
+            height: 24px;
+            width: 24px;
+        }
+
+        &--img:hover {
+            margin: 0 30px 0 30px;
+            height: 24px;
+            width: 24px;
+        }
     }
 
-
+    &__bottomVersionText{
+        color: white;
+        font-weight: 400;
+        margin: 40px;
+        
+    }
 }
 
 .topbar{
     display: flex;
-    float: right;
-    position: relative;
-    height: 80px; 
-    width: 82%;
-    
-    border: green dotted medium;
+    flex-direction: row;
+    margin-left: 250px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    border: none;
 
     &__searchBox{
+        font-family: AvenirNext-Regular;
         margin-left: 70px;
+        background-color: #F7F7F7;
+        border-radius: 2px;
+        border: #DEDEDE solid medium;
         
         &--input{
-
-            // display: flex;
-            // align-items: center;
             background-color: #F7F7F7;
-            border-radius: 2px;
             height: 40px;
             width: 381px;
-            border: #DEDEDE solid medium;
-            margin-top: 8px;
+            border: none;
+            outline: none;
+            padding-left: 20px;
+            @media (max-width: 1420px)
+            {
+            width: 300px;
+            display: inline;
+            }
+            
+            @media (max-width: 975px)
+            {
+            width: 100px;
+            display: inline;
+            }
+
+
+        }
+
+        &--input::placeholder{
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        &--input:hover::placeholder{
+            color:black  ;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        &--img{
+            vertical-align: middle;
+            padding-right: 20px;
+            width: 20px;
+            height: 25px;
+        }
+            @media (max-width: 975px)
+            {
+            // padding: 0px;
+            }
+    }
+
+    &__searchBox:hover{
+        margin-left: 70px;
+        background-color: #F7F7F7;
+        border-radius: 2px;
+        border:  #004892  solid medium;
+
+        &--input:hover{
+            background-color: #F7F7F7;
+            color: black;
+            height: 40px;
+            width: 381px;
+            border: none;
+            outline: none;
             padding-left: 20px;
         }
     }
 
+    &__rightBox{
+        display: flex;
+        align-items: center;
+        margin-left: 45%;
+        margin-right: 20px;
+        @media (max-width: 1420px)
+        {
+        margin-left: 10%;
+        margin-right: 20px;
+        }
+        @media (max-width: 975px)
+        {
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+        
+        &--userImg{
+            border-radius: 100%;
+            background-position: center;
+            background-size: cover;
+            width: 36px;
+            height: 36px;
+        }
+    }
 }
