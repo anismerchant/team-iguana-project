@@ -26,8 +26,8 @@ app.get('/inventory', (req, res) => {
     res.json(inventory_list_data);
 })
 
-// TODO: GET Warehouse Inventory
 
+// TODO: GET Warehouse Inventory
 //GET Inventory Item
 app.get('/inventory/:id', (req,res) => {
     const requestedItem = Number(req.params.id);
@@ -42,27 +42,56 @@ app.get('/inventory/:id', (req,res) => {
         res.send({msg:'Item Not Found 404'});
     }
 })
-// TODO: POST Warehouse
 
+
+// TODO: POST Warehouse
 // Create an endpoint
 app.post('/warehouses/:id', (req, res) => {
 
     // Create a new object with data received in POST request 
     let newObject = {
-        "warehouse_id": (Number(req.body.warehouse_id)),
+        "warehouse_id": (Number(req.params.id)),
         "address": req.body.address,
         "contact": req.body.contact,
         "type": req.body.type
     }
 
-    // Add new post request to warehouse_data json file 
-    //   and return the newly created warehouse back to the front-end
-    warehouse_data.push(newObject);
-    res.json(newObject);
+    // If the data is malformed or if a field is missing, 
+    //  return a 400 status, rejecting the POST request.
     
-   
+    // Solution One: Works
+    if (typeof req.body.address !== 'string' || req.body.address === null || req.body.address === '' || req.body.address === undefined || req.body.address === NaN) {
+        return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked."); 
+    } 
+    if (typeof req.body.contact !== 'string' || req.body.contact === null || req.body.contact === '' || req.body.contact === undefined || req.body.contact === NaN) {
+        return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked.");
+    } 
+    if (typeof req.body.type !== 'string' || req.body.type === null || req.body.type === '' || req.body.type === undefined || req.body.type === NaN) {
+        return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked.");
+    } 
+    else {
+        return res.json(newObject);
+    }
+
+    // Solution Two: Doesn't work
+    // if (typeof req.body.address === 'string' && req.body.address !== "") {
+    //     console.log(req.body.address)
+    //     return res.json(newObject); 
+    // } 
+    // if (typeof req.body.contact === 'string' && req.body.contact !== "") {
+    //     return res.json(newObject);
+    // } 
+    // if (typeof req.body.type === 'string' && req.body.type !== "") {
+    //     return res.json(newObject);
+    // } 
+    // else {
+    //     return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked."); 
+    // }
 });
+
+
 // TODO: DELETE Item
+
 
 
 // Server Listening...
