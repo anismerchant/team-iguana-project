@@ -26,9 +26,9 @@ app.get('/warehouses', (req,res)=>{
 
 //GET Inventory Item
 app.get('/inventory/:id', (req,res) => {
-    const requestedItem = req.params;
-    const itemList = inventory_list_data.find(item => item.id == requestedItem.id);
-
+    const requestedItem = Number(req.params.id);
+    const itemList = inventory_list_data.find(item => item.id === requestedItem);
+    
     if(itemList !== null)
     {
         res.json(itemList);
