@@ -31,11 +31,12 @@ app.get('/inventory', (req, res) => {
 
 app.get('/warehouses/:id', (req, res) => {
     let warehouseId = Number(req.params.id);
-
-    if (warehouseId > 4 || warehouseId === 0){
+    const warehouseArr = inventory_list_data.filter(data => data.warehouse_id === warehouseId);
+    
+    if (warehouseArr.length === 0){
         res.status(404).send('Error: That page does not exist!');
+
     } else {
-        const warehouseArr = inventory_list_data.filter(data => data.warehouse_id === warehouseId);
         res.json(warehouseArr);
     }
 
