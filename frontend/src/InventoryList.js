@@ -64,11 +64,10 @@ export default class InventoryList extends React.Component {
                     </div>
                     {/* PRODUCT DETAILS RECEIVED AS PROPS FROM PARENT */}    
                     {inventoryArray.map((inventory, index) => {
-                        return <Link key={index} to={`/inventory/${inventory.id}`}>
+                        return <Link className={(index % 2 === 0) ? "white" : "grey"} key={index} to={`/inventory/${inventory.id}`}>
                             <InventoryListChild 
                                 inventoryState={this.state.inventory}
                                 key={index}
-                                className={(index % 2 === 0) ? "white" : "grey"}
                                 productName={inventory.name}
                                 productWarehouseId={inventory.warehouse_id}
                                 productDesc={inventory.description}
