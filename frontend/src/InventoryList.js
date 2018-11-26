@@ -68,7 +68,7 @@ export default class InventoryList extends React.Component {
                             <InventoryListChild 
                                 inventoryState={this.state.inventory}
                                 key={index}
-                                className={(index % 2 === 0) ? "white" : "grey"}
+                                className={(index % 2 === 1) ? "white" : "grey"}
                                 productName={inventory.name}
                                 productWarehouseId={inventory.warehouse_id}
                                 productDesc={inventory.description}
