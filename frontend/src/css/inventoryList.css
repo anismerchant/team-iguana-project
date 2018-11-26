@@ -1,0 +1,222 @@
+/*** ALL DEVICES' VARIABLES ***/
+/* Typography */
+/* Color Schemes */
+/* TODO: Setup Mixins */
+/* GLOBAL RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("./typography/Avenir Next.ttc") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* INVENTORY SECTION */
+.inventoryList__container {
+  background-color: #F7F7F7;
+  width: 85vw;
+  min-height: 100vh;
+  margin-left: 15vw;
+  margin-top: 10vh;
+  font-family: "Avenir Next", sans-serif;
+}
+
+.inventoryList__container .inventoryList--heading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  padding: 5% 2% 2% 2%;
+}
+
+.inventoryList__container .inventoryList--heading-container .inventoryList--heading h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.inventoryList__container .inventoryList--heading-container .inventoryList--filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+.inventoryList__container .inventoryList--heading-container .inventoryList--filter h2 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #004892;
+}
+
+.inventoryList__container .inventoryList--main-container {
+  width: 90%;
+  position: relative;
+  left: 5%;
+  background: #FFF;
+  border: 1px solid #DEDEDE;
+}
+
+.inventoryList__container .inventoryList--main-container a {
+  text-decoration: none;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 0.6rem;
+  width: 100%;
+  padding: 3% 0;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--item {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--lastOrdered {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--location {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--quantity {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--status {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .spaceBlock {
+  width: 10%;
+}
+
+.inventoryList__container .inventoryList--main-container a .grey {
+  background-color: #F7F7F7;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 0.6rem;
+  width: 100%;
+  padding: 3% 0;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container .inventoryList__form--product {
+  color: #004892;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container .inventoryList__form--product-desc {
+  font-weight: normal;
+  color: #000;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--date-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--date-container h3 {
+  font-weight: normal;
+  color: #000;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--city-province-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--city-province-container h3 {
+  font-weight: normal;
+  color: #000;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-number-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-number-container h3 {
+  font-weight: normal;
+  color: #000;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-in-stock-container {
+  width: 15%;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-in-stock-container h3 {
+  font-weight: normal;
+  color: #000;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product {
+  width: 10%;
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.9rem;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  opacity: .6;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product:focus {
+  outline: 0;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product:hover {
+  opacity: 1;
+  text-shadow: 0 0 1px #f70d5b;
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+/*# sourceMappingURL=inventoryList.css.map */

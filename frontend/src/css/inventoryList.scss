@@ -1,0 +1,172 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* GLOBAL RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    @include fontFaceAvenirNext();
+}
+
+/* INVENTORY SECTION */
+.inventoryList__container {
+    background-color: $lightgrey-color;
+    width: 85vw;
+    min-height: 100vh;
+    margin-left: 15vw;
+    margin-top: 10vh;
+    font-family: $inventory-font-family;
+   
+    .inventoryList--heading-container {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        position: relative;
+        left: 5%;
+        padding: 5% 2% 2% 2%;
+        
+        .inventoryList--heading {
+            h1 {
+                font-size: 1.5rem;
+                font-weight: 200;
+            }
+            
+        }
+        .inventoryList--filter {
+            display: flex;
+            flex-direction: column-reverse;
+            h2 {
+                font-size: 0.7rem;
+                font-weight: bold;
+                color: $blue-color;
+            }
+        }
+    }
+    .inventoryList--main-container{
+        width: 90%;
+        position: relative;
+        left: 5%;
+        background: #FFF;
+        border: 1px solid #DEDEDE;
+
+        a {
+            text-decoration: none;
+        }
+
+        .inventoryList__form--product-heading {
+            display: flex;
+            justify-content: space-around;
+            font-size: 0.6rem;
+            width: 100%;
+            padding: 3% 0;
+
+            .inventoryList__form--product-heading-group {
+                display: flex;
+                justify-content: space-around;
+                width: 90%;
+
+                .inventoryList__form--item {
+                    width: 15%;
+                }
+                .inventoryList__form--lastOrdered{
+                    width: 15%;
+                }
+                .inventoryList__form--location{
+                    width: 15%;
+                }
+                .inventoryList__form--quantity {
+                    width: 15%;
+                }
+                .inventoryList__form--status {
+                    width: 15%;
+                }
+            }
+            .spaceBlock {
+                width: 10%;
+            }
+        }
+        a {
+            .grey {
+                background-color: $lightgrey-color;
+            }
+        }
+
+        .inventoryList__form--product-details {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            font-size: 0.6rem;
+            width: 100%;
+            padding: 3% 0;
+
+            .inventoryList__form--product-details-group {
+                display: flex;
+                justify-content: space-around;
+                width: 90%;
+
+                .inventoryList__form--product-name-container {
+                    width: 15%;
+                    .inventoryList__form--product {
+                        color: $blue-color;
+                    }
+                    .inventoryList__form--product-desc {
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
+                    }
+                }
+                .inventoryList__form--date-container {
+                    width: 15%;
+                    h3 {
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
+                    }
+                }
+                .inventoryList__form--city-province-container {
+                    width: 15%;
+                    h3 {
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
+                    }
+                }
+                .inventoryList__form--quantity-number-container {
+                    width: 15%;
+                    h3 {
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
+                    }
+                }
+                .inventoryList__form--quantity-in-stock-container {
+                    width: 15%;
+                    h3 {
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
+                    }
+                }
+            }
+            .inventoryList__form--delete-product {
+                width: 10%;
+                font-family: $inventory-font-family;
+                font-size: 0.9rem;
+                background-color: Transparent;
+                background-repeat: no-repeat;
+                border: none;
+                overflow: hidden;
+                outline:none;
+                opacity: .6;
+                &:focus {
+                    outline: 0;
+                }
+                transition: transform .2s;
+                &:hover {
+                    opacity: 1;
+                    text-shadow: 0 0 1px #f70d5b;
+                    transform: scale(1.08);
+                }
+            }
+        }
+
+    }
+}

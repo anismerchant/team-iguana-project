@@ -1,9 +1,34 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-export default class Sidebar extends Component {
+class Sidebar extends Component {
     render() {
          return (
-            <div></div>
-        );
+            <div className="sidebar">
+                    <label>
+                        <Link to={'/'} className="sidebar__LogoLinkBox">
+                            <img src="./Assets/wordmark/wordmark.svg" className="sidebar__LogoLinkBox--topLogo"/>
+                        </Link>
+                    </label>
+                    <form className="sidebar__links">
+                        <label className="sidebar__links--label">
+                            <img src="./Assets/Icons/Inventory.svg" className="sidebar__links--img"/>
+                            <Link to={'/inventory'} className="sidebar__links--link" />
+                        Inventory</label>
+                        <label className="sidebar__links--label">
+                            <img src="./Assets/Icons/Location.svg" className="sidebar__links--img"/>
+                            <Link to={'/warehouses'} className="sidebar__links--link" />
+                        Locations</label>
+                        <label className="sidebar__links--label">
+                            <img src="./Assets/Icons/User.svg" className="sidebar__links--img"/>
+                            <Link to={'/inventory'} className="sidebar__links--link" />
+                        Users</label>
+                    </form>
+                    <div className="sidebar__bottomVersionText">Version 1.0</div>
+            </div>
+         )
     }
 }
+
+export default Sidebar;
+
