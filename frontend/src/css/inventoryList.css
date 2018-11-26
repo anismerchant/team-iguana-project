@@ -1,4 +1,6 @@
-/* TODO: Setup Variables */
+/*** ALL DEVICES' VARIABLES ***/
+/* Typography */
+/* Color Schemes */
 /* TODO: Setup Mixins */
 /* GLOBAL RESETS */
 * {
@@ -19,7 +21,7 @@
 .inventoryList__container {
   background-color: #F7F7F7;
   width: 85vw;
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 15vw;
   margin-top: 10vh;
   font-family: "Avenir Next", sans-serif;
@@ -61,10 +63,14 @@
 
 .inventoryList__container .inventoryList--main-container {
   width: 90%;
-  height: 75vh;
   position: relative;
   left: 5%;
   background: #FFF;
+  border: 1px solid #DEDEDE;
+}
+
+.inventoryList__container .inventoryList--main-container a {
+  text-decoration: none;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading {
@@ -103,8 +109,16 @@
   width: 15%;
 }
 
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .inventoryList__form--product-heading-group .inventoryList__form--status {
+  width: 15%;
+}
+
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading .spaceBlock {
   width: 10%;
+}
+
+.inventoryList__container .inventoryList--main-container a .grey {
+  background-color: #F7F7F7;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details {
@@ -140,6 +154,7 @@
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--product-name-container .inventoryList__form--product-desc {
   font-weight: normal;
+  color: #000;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--date-container {
@@ -148,6 +163,7 @@
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--date-container h3 {
   font-weight: normal;
+  color: #000;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--city-province-container {
@@ -156,6 +172,7 @@
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--city-province-container h3 {
   font-weight: normal;
+  color: #000;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-number-container {
@@ -164,10 +181,16 @@
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-number-container h3 {
   font-weight: normal;
+  color: #000;
+}
+
+.inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-in-stock-container {
+  width: 15%;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--product-details-group .inventoryList__form--quantity-in-stock-container h3 {
   font-weight: normal;
+  color: #000;
 }
 
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-details .inventoryList__form--delete-product {

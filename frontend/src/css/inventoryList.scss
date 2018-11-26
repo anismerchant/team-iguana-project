@@ -13,9 +13,9 @@
 
 /* INVENTORY SECTION */
 .inventoryList__container {
-    background-color: #F7F7F7;
+    background-color: $lightgrey-color;
     width: 85vw;
-    height: 100vh;
+    min-height: 100vh;
     margin-left: 15vw;
     margin-top: 10vh;
     font-family: $inventory-font-family;
@@ -41,16 +41,20 @@
             h2 {
                 font-size: 0.7rem;
                 font-weight: bold;
-                color: #004892;
+                color: $blue-color;
             }
         }
     }
     .inventoryList--main-container{
         width: 90%;
-        height: 75vh;
         position: relative;
         left: 5%;
         background: #FFF;
+        border: 1px solid #DEDEDE;
+
+        a {
+            text-decoration: none;
+        }
 
         .inventoryList__form--product-heading {
             display: flex;
@@ -76,11 +80,20 @@
                 .inventoryList__form--quantity {
                     width: 15%;
                 }
+                .inventoryList__form--status {
+                    width: 15%;
+                }
             }
             .spaceBlock {
                 width: 10%;
             }
         }
+        a {
+            .grey {
+                background-color: $lightgrey-color;
+            }
+        }
+
         .inventoryList__form--product-details {
             display: flex;
             justify-content: space-around;
@@ -88,7 +101,6 @@
             font-size: 0.6rem;
             width: 100%;
             padding: 3% 0;
-            
 
             .inventoryList__form--product-details-group {
                 display: flex;
@@ -98,33 +110,39 @@
                 .inventoryList__form--product-name-container {
                     width: 15%;
                     .inventoryList__form--product {
-                        color: #004892;
+                        color: $blue-color;
                     }
                     .inventoryList__form--product-desc {
-                        font-weight: normal;
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
                     }
                 }
                 .inventoryList__form--date-container {
                     width: 15%;
                     h3 {
-                        font-weight: normal;
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
                     }
                 }
                 .inventoryList__form--city-province-container {
                     width: 15%;
                     h3 {
-                        font-weight: normal;
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
                     }
                 }
                 .inventoryList__form--quantity-number-container {
                     width: 15%;
                     h3 {
-                        font-weight: normal;
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
                     }
                 }
                 .inventoryList__form--quantity-in-stock-container {
+                    width: 15%;
                     h3 {
-                        font-weight: normal;
+                        font-weight: $font-weight-normal;
+                        color: $black-color;
                     }
                 }
             }
