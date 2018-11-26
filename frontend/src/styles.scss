@@ -6,8 +6,12 @@
 }
 
 body{
-margin: 0;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+margin: 0%;
 font-family: Avenir Next;
+
 }
 
 .sidebar{
@@ -16,14 +20,21 @@ font-family: Avenir Next;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 250px;
+    
     height: 100%;
     background-color: #003B77;
-    
-    &__topLogo {
-        margin-top: 30px;
-        height: 13px;
-        width: 93px;
+    @media (max-width: 800px)
+    {
+    width: 180px;
+    }
+
+    &__LogoLinkBox{
+
+        &--topLogo {
+            margin-top: 30px;
+            height: 13px;
+            width: 93px;
+        }
     }
 
     &__links {
@@ -33,7 +44,7 @@ font-family: Avenir Next;
         margin-top: 50px;
         margin-bottom: 100px;
 
-        &--link{
+        &--label{
             display: flex;
             align-items: center;
             width: 250px;
@@ -43,12 +54,14 @@ font-family: Avenir Next;
             font-weight: 400;
             font-family: Avenir Next;
             color: #CACACA;
-            border-radius: 3px;
             background-color: #003B77;
-            border: #003B77 solid thin;
+            @media (max-width: 800px)
+            {
+            width: 180px;
+            }
         }
 
-        &--link:hover{
+        &--label:hover{
             display: flex;
             width: 250px;
             height: 80px;
@@ -56,10 +69,11 @@ font-family: Avenir Next;
             font-size: 14px;
             font-family: Avenir Next;
             color: #FFFFFF;
-            border-radius: 3px;
             background-color: #004892;
-            border: #004892 solid thin;
-            outline: none;
+            @media (max-width: 800px)
+            {
+            width: 180px;
+            }
         }
 
         &--img {
@@ -72,6 +86,12 @@ font-family: Avenir Next;
             margin: 0 30px 0 30px;
             height: 24px;
             width: 24px;
+        }
+
+        &--link {
+            width: 250px;
+            height: 80px;
+            position: fixed;
         }
     }
 
@@ -93,10 +113,18 @@ font-family: Avenir Next;
 
     &__searchBox{
         font-family: AvenirNext-Regular;
-        margin-left: 70px;
+        margin-left: 120px;
         background-color: #F7F7F7;
         border-radius: 2px;
         border: #DEDEDE solid medium;
+        @media (max-width: 1420px)
+        {
+        margin-left: 70px;
+        }
+        @media (max-width: 700px)
+        {
+        margin-left: 10px;
+        }
         
         &--input{
             background-color: #F7F7F7;
@@ -105,15 +133,21 @@ font-family: Avenir Next;
             border: none;
             outline: none;
             padding-left: 20px;
-            @media (max-width: 1420px)
+            @media (max-width: 1024px)
             {
             width: 300px;
             display: inline;
             }
             
-            @media (max-width: 975px)
+            @media (max-width: 850px)
             {
-            width: 100px;
+            width: 200px;
+            display: inline;
+            }
+            @media (max-width: 700px)
+            {
+            max-width: 90px;
+            width: 90px;
             display: inline;
             }
 
@@ -137,10 +171,6 @@ font-family: Avenir Next;
             width: 20px;
             height: 25px;
         }
-            @media (max-width: 975px)
-            {
-            // padding: 0px;
-            }
     }
 
     &__searchBox:hover{
@@ -167,10 +197,15 @@ font-family: Avenir Next;
         margin-right: 20px;
         @media (max-width: 1420px)
         {
-        margin-left: 10%;
+        margin-left: 100px;
         margin-right: 20px;
         }
-        @media (max-width: 975px)
+        @media (max-width: 1024px)
+        {
+        margin-left: 50px;
+        margin-right: 10px;
+        }
+        @media (max-width: 800px)
         {
         margin-left: 10px;
         margin-right: 10px;
@@ -182,6 +217,7 @@ font-family: Avenir Next;
             background-size: cover;
             width: 36px;
             height: 36px;
+            margin-right: 10px;
         }
     }
 }

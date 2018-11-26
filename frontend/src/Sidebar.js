@@ -1,23 +1,31 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 class Sidebar extends Component {
     render() {
          return (
-            <form className="sidebar" id="sidebarForm">
-                    <img src="./Assets/wordmark/wordmark.svg" className="sidebar__topLogo"/>
-                    <div className="sidebar__links">
-                        <button className="sidebar__links--link">
+            <div className="sidebar">
+                    <label>
+                        <Link to={'/'} className="sidebar__LogoLinkBox">
+                            <img src="./Assets/wordmark/wordmark.svg" className="sidebar__LogoLinkBox--topLogo"/>
+                        </Link>
+                    </label>
+                    <form className="sidebar__links">
+                        <label className="sidebar__links--label">
                             <img src="./Assets/Icons/Inventory.svg" className="sidebar__links--img"/>
-                        Inventory</button>
-                        <button className="sidebar__links--link">
+                            <Link to={'/inventory'} className="sidebar__links--link" />
+                        Inventory</label>
+                        <label className="sidebar__links--label">
                             <img src="./Assets/Icons/Location.svg" className="sidebar__links--img"/>
-                        Locations</button>
-                        <button className="sidebar__links--link">
+                            <Link to={'/warehouses'} className="sidebar__links--link" />
+                        Locations</label>
+                        <label className="sidebar__links--label">
                             <img src="./Assets/Icons/User.svg" className="sidebar__links--img"/>
-                        Users</button>
-                    </div>
+                            <Link to={'/inventory'} className="sidebar__links--link" />
+                        Users</label>
+                    </form>
                     <div className="sidebar__bottomVersionText">Version 1.0</div>
-            </form>
+            </div>
          )
     }
 }
