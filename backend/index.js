@@ -28,6 +28,21 @@ app.get('/inventory', (req, res) => {
 
 
 // TODO: GET Warehouse Inventory
+
+app.get('/warehouses/:id', (req, res) => {
+    let warehouseId = Number(req.params.id);
+    const warehouseArr = inventory_list_data.filter(data => data.warehouse_id === warehouseId);
+    
+    if (warehouseArr.length === 0){
+        res.status(404).send('Error: That page does not exist!');
+
+    } else {
+        res.json(warehouseArr);
+    }
+
+})
+
+
 //GET Inventory Item
 app.get('/inventory/:id', (req,res) => {
     const requestedItem = Number(req.params.id);
