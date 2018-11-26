@@ -1,8 +1,9 @@
 import React from 'react';
 import InventoryListChild from './InventoryListChild';
+import { Link } from 'react-router-dom';
 
 /* setup const for baseUrl and inventory path */
-const baseUrl = 'http:localhost:8080';
+const baseUrl = 'http://localhost:8080';
 const inventoryListPath = '/inventory';
 
 export default class InventoryList extends React.Component {
@@ -15,12 +16,21 @@ export default class InventoryList extends React.Component {
     // Fetch all inventory list once component mounts:
     componentDidMount(prevProps, prevState) {
         fetch(baseUrl + inventoryListPath)
-            .then(res => {return res.json();})
-            .then(data => {return this.setState({inventory: data})})
-            .catch((err) => {console.log(err)});
+           .then((response) => {
+               return response.json();
+           })
+           .then((data) => {
+               return this.setState({inventory: data})
+           })
+           .catch( (err) => {
+               console.log(err);
+           })
     }
 
     render() {
+        console.log(this.state.inventory);
+        let inventoryArray = this.state.inventory;
+        
         return (
             <div className="inventoryList__container">
                 <div className="inventoryList--heading-container">
@@ -53,7 +63,25 @@ export default class InventoryList extends React.Component {
                         <div className="spaceBlock"></div>   
                     </div>
                     {/* PRODUCT DETAILS RECEIVED AS PROPS FROM PARENT */}    
-                    <InventoryListChild />
+                    {inventoryArray.map((inventory, index) => {
+                        return <Link key={index} to={`/inventory/${inventory.id}`}>
+                            <InventoryListChild 
+                                inventoryState={this.state.inventory}
+                                key={index}
+                                className={(index % 2 === 0) ? "white" : "grey"}
+                                productName={inventory.name}
+                                productWarehouseId={inventory.warehouse_id}
+                                productDesc={inventory.description}
+                                productLastOrdered={inventory.last_ordered}
+                                productOrderedBy={inventory["ordered by"]}
+                                productRefNum={inventory.refNum}
+                                productCategory={inventory.category}
+                                productQuantity={inventory.quantity}
+                                productLocation={inventory.location}
+                                productStatus={inventory.status}
+                            /></Link>
+                        })    
+                    }
                 </div>
             </div>
         );
