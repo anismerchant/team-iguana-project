@@ -60,7 +60,6 @@
             width: 180px;
             }
         }
-
         &--label:hover{
             display: flex;
             width: 250px;
@@ -89,12 +88,12 @@
             width: 24px;
         }
 
-        &--link {
-            width: 250px;
-            height: 80px;
-            position: fixed;
+            &--link {
+                width: 250px;
+                height: 80px;
+                position: fixed;
+            }
         }
-    }
 
     &__links:hover {
         opacity: 0.9;
@@ -104,7 +103,6 @@
         color: white;
         font-weight: 400;
         margin: 40px;
-        
     }
 }
 
@@ -134,7 +132,7 @@
         {
         margin-left: 10px;
         }
-        
+            
         &--input{
             background-color: #F7F7F7;
             height: 40px;
@@ -147,7 +145,6 @@
             width: 300px;
             display: inline;
             }
-            
             @media (max-width: 850px)
             {
             width: 200px;
@@ -159,8 +156,6 @@
             width: 90px;
             display: inline;
             }
-
-
         }
 
         &--input::placeholder{
@@ -199,36 +194,37 @@
         }
     }
 
-    &__rightBox{
-        display: flex;
-        align-items: center;
-        margin-left: 45%;
-        margin-right: 20px;
-        @media (max-width: 1420px)
-        {
-        margin-left: 100px;
-        margin-right: 20px;
-        }
-        @media (max-width: 1024px)
-        {
-        margin-left: 50px;
-        margin-right: 10px;
-        }
-        @media (max-width: 800px)
-        {
-        margin-left: 10px;
-        margin-right: 10px;
-        }
-        
-        &--userImg{
-            border-radius: 100%;
-            background-position: center;
-            background-size: cover;
-            width: 36px;
-            height: 36px;
+        &__rightBox{
+            display: flex;
+            align-items: center;
+            margin-left: 45%;
+            margin-right: 20px;
+            @media (max-width: 1420px)
+            {
+            margin-left: 100px;
+            margin-right: 20px;
+            }
+            @media (max-width: 1024px)
+            {
+            margin-left: 50px;
             margin-right: 10px;
+            }
+            @media (max-width: 800px)
+            {
+            margin-left: 10px;
+            margin-right: 10px;
+            }
+            
+            &--userImg{
+                border-radius: 100%;
+                background-position: center;
+                background-size: cover;
+                width: 36px;
+                height: 36px;
+                margin-right: 10px;
+            }
         }
-    }
+    // }
 }
 
 .warehouses{
@@ -317,14 +313,14 @@
             padding: 5px;
         }
 
-        &--rightContainer{
-            font-size: 12px;
-            color: #7C7C7C;
-            display: flex;
-            flex-direction: column;
-            width: 20vw;
-            min-width: 100px;
-            padding: 5px;
-        }
-    }   
-}
+            &--rightContainer{
+                font-size: 12px;
+                color: #7C7C7C;
+                display: flex;
+                flex-direction: column;
+                width: 20vw;
+                min-width: 100px;
+                padding: 5px;
+            }
+        }   
+    }
