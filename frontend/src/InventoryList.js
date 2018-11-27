@@ -15,6 +15,7 @@ export default class InventoryList extends React.Component {
 
     // Fetch all inventory list once component mounts:
     componentDidMount(prevProps, prevState) {
+
         fetch(baseUrl + inventoryListPath)
            .then((response) => {
                return response.json();
@@ -25,7 +26,10 @@ export default class InventoryList extends React.Component {
            .catch( (err) => {
                console.log(err);
            })
+        
     }
+
+    
 
     render() {
         console.log(this.state.inventory);
