@@ -16,9 +16,6 @@ export default class InventoryList extends React.Component {
     // Fetch all inventory list once component mounts:
     componentDidMount(prevProps, prevState) {
 
-        //need to include an if statement here
-        //check if there is an id in the URL
-        //if no id then do this fetch for full inventory list:
         fetch(baseUrl + inventoryListPath)
            .then((response) => {
                return response.json();
@@ -30,10 +27,6 @@ export default class InventoryList extends React.Component {
                console.log(err);
            })
         
-           //if there is an id in the URL
-           //then grab the id and pass to a function that will 
-           //kick off a fetchCall for the product info for the specific 
-           //inventory item with that id.
     }
 
     
