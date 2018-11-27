@@ -14,7 +14,7 @@ export default class InvventoryListChild extends React.Component {
                         <h3 className="inventoryList__form--date">{this.props.productLastOrdered}</h3>
                     </div>
                     <div className="inventoryList__form--city-province-container">
-                        <h3 className="inventoryList__form--city-province">{this.props.productLocation}</h3>
+                        <h3 className="inventoryList__form--city-province">{this.props.productLocation}</h3>0p
                     </div>
                     <div className="inventoryList__form--quantity-number-container">
                         <h3 className="inventoryList__form--quantity-number">{this.props.productQuantity}</h3>
