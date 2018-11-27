@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import './App.css';
 import './css/inventoryList.css';
+import './css/productDetails.css';
 import TopBar from './TopBar';
 import Sidebar from './Sidebar';
 import InventoryList from './InventoryList';
@@ -17,20 +18,20 @@ export default class App extends Component {
     <div>
       <Router>
         {/* We should give the Sidebar className sidebar or leftSide */}
-        <div className="">
-          <Sidebar />
-          {/* We should give the right side that holds TopBar & the main routes className rightSide or something similar */}
+          <div className="">
+            <Sidebar />
+            {/* We should give the right side that holds TopBar & the main routes className rightSide or something similar */}
           <div className=''>
-           <TopBar />
-           <div className="main">
-             <Switch>
-               <Route path="/warehouses" exact component={Warehouses}  />
-               <Route path="/inventory" exact component={InventoryList} />
-               <Route path="/warehouses/:id" exact render={ (props) => { return <InventoryList warehouseId={props.match.params.id} />}} />
-               <Route path="/inventory/:id" exact render={ (props) => { return <ProductDetail productId={props.match.params.id} />}} />
-               <Route exact path="/" render={() =><Redirect to='/warehouses'/>} />
-             </Switch>
-           </div>
+            <TopBar />
+            <div className="main">
+            <Switch>
+                <Route path="/warehouses" exact component={Warehouses}  />
+                <Route path="/inventory" exact component={InventoryList} />
+                <Route path="/warehouses/:id" exact render={ (props) => { return <InventoryList warehouseId={props.match.params.id} />}} />
+                <Route path="/inventory/:id" exact render={ (props) => { return <ProductDetail productId={props.match.params.id} />}} />
+                <Route exact path="/" render={() =><Redirect to='/warehouses'/>} />
+              </Switch>
+            </div>
           </div>
         </div>
       </Router>
