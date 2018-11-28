@@ -1,30 +1,52 @@
 [
     {
         "warehouse_id": 1,
-        "address": "123 Main Street West Toronto, Canada M6J 2H2",
-        "contact": "Clark Kent, Warehouse Manager +1 416 678 2345 superman@icecreams.com",
-        "type": "Dairy"
+        "type": "Dairy",
+        "address_num": "123",
+        "address_street": "Main Street West",
+        "city": "Toronto",
+        "country": "Canada",
+        "postal_code": "M6J 2H2",
+        "manager_name": "Clark Kent",
+        "phone_num": "+1 416 678 2345",
+        "email": "superman@icecreams.com"
 
     },
     {
         "warehouse_id": 2,
-        "address": "456 Pine Street Montreal, Canada H2W 1S3",
-        "contact": "Bruce Wayne, Warehouse Manager +1 514 923 1106 batman@icecreams.com",
-        "type": "Sorbet"
+        "type": "Sorbet",
+        "address_num": "456",
+        "address_street":  "Pine Street",
+        "city": "Montreal",
+        "country": "Canada",
+        "postal_code": "H2W 1S3",
+        "manager_name": "Bruce Wayne",
+        "phone_num": "+1 514 923 1106",
+        "email": "batman@icecreams.com"
 
     },
     {
         "warehouse_id": 3,
-        "address": "789 Elm Street Ottawa, Canada K2M 9N5",
-        "contact": "Hal Jordan, Warehouse Manager +1 613 413 0093 greenlantern@icecreams.com",
-        "type": "Frozen Yogurt"
-
+        "type": "Frozen Yogurt",
+        "address_num": "789",
+        "address_street": "Elm Street",
+        "city": "Ottawa", 
+        "country": "Canada",
+        "postal_code": "K2M 9N5",
+        "manager_name": "Hal Jordan",
+        "phone_num": "+1 613 413 0093",
+        "email": "greenlantern@icecreams.com"
     },
     {
         "warehouse_id": 4,
-        "address": "123 Stephen Street Kingston, Canada K7K 2C6",
-        "contact": "Wally West, Warehouse Manager +1 343 923 1106 flash@icecreams.com",
-        "type": "No Added Sugar"
-
+        "type": "No Added Sugar",
+        "address_num": "123",
+        "address_street": "Stephen Street",
+        "city": "Kingston", 
+        "country": "Canada",
+        "postal_code": "K7K 2C6",
+        "manager_name": "Wally West",
+        "phone_num": "+1 343 923 1106",
+        "email": "flash@icecreams.com"
     }
 ]
