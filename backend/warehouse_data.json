@@ -2,8 +2,7 @@
     {
         "warehouse_id": 1,
         "type": "Dairy",
-        "address_num": "123",
-        "address_street": "Main Street West",
+        "address_street": "123 Main Street West",
         "city": "Toronto",
         "country": "Canada",
         "postal_code": "M6J 2H2",
@@ -15,8 +14,7 @@
     {
         "warehouse_id": 2,
         "type": "Sorbet",
-        "address_num": "456",
-        "address_street":  "Pine Street",
+        "address_street":  "456 Pine Street",
         "city": "Montreal",
         "country": "Canada",
         "postal_code": "H2W 1S3",
@@ -28,8 +26,7 @@
     {
         "warehouse_id": 3,
         "type": "Frozen Yogurt",
-        "address_num": "789",
-        "address_street": "Elm Street",
+        "address_street": "789 Elm Street",
         "city": "Ottawa", 
         "country": "Canada",
         "postal_code": "K2M 9N5",
@@ -40,8 +37,7 @@
     {
         "warehouse_id": 4,
         "type": "No Added Sugar",
-        "address_num": "123",
-        "address_street": "Stephen Street",
+        "address_street": "123 Stephen Street",
         "city": "Kingston", 
         "country": "Canada",
         "postal_code": "K7K 2C6",
