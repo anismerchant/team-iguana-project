@@ -7,7 +7,6 @@ import Sidebar from './Sidebar';
 import InventoryList from './InventoryList';
 import Warehouses from './Warehouses';
 import ProductDetail from './ProductDetail';
-import WarehouseDetail from './WarehouseDetail';
 import { BrowserRouter as Router, Route, Switch, Redirect,} from 'react-router-dom';
 import './styles.css';
 
@@ -28,7 +27,7 @@ export default class App extends Component {
             <Switch>
                 <Route path="/warehouses" exact component={Warehouses}  />
                 <Route path="/inventory" exact component={InventoryList} />
-                <Route path="/warehouses/:id" exact render={ (props) => { return <WarehouseDetail warehouseId={props.match.params.id} />}} />
+                <Route path="/warehouses/:id" exact render={ (props) => { return <InventoryList warehouseId={props.match.params.id} />}} />
                 <Route path="/inventory/:id" exact render={ (props) => { return <ProductDetail productId={props.match.params.id} />}} />
                 <Route exact path="/" render={() =><Redirect to='/warehouses'/>} />
               </Switch>

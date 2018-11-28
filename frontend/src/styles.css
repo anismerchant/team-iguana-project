@@ -534,8 +534,47 @@
   }
 }
 
+.warehouseDetailed__header {
+  padding: 15px 10px;
+  color: #004892;
+}
+
 .warehouseDetailed__box {
-  padding: 10px;
-  border: red dotted thin;
+  margin: 5px;
+  padding: 15px 5px;
+  border: #ADADAD thin solid;
+  border-radius: 3px;
+}
+
+.warehouseDetailed__box--description {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--lastOrder {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--orderedBy {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--refNum {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--category {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--quantity {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--location {
+  padding: 10px 5px;
+}
+
+.warehouseDetailed__box--stockStatus {
+  padding: 10px 5px;
 }
 /*# sourceMappingURL=styles.css.map */
