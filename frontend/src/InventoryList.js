@@ -75,7 +75,7 @@ export default class InventoryList extends React.Component {
                                 className={(index % 2 === 1) ? "white" : "grey"}
                                 productName={inventory.name}
                                 productWarehouseId={inventory.warehouse_id}
-                                productDesc={inventory.description}
+                                productDesc={inventory.short_description}
                                 productLastOrdered={inventory.last_ordered}
                                 productOrderedBy={inventory["ordered by"]}
                                 productRefNum={inventory.refNum}
