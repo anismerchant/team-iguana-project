@@ -5,7 +5,7 @@ export default class TopBar extends Component {
     render() {
          return (
         <div className="topbar">
-            <form className="topbar__searchBox" id="searchform">
+            <form className="topbar__searchBox">
                 <input
                     className="topbar__searchBox--input"
                     type="text"
