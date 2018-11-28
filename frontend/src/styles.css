@@ -444,7 +444,7 @@
 
 .warehouseBox__lower--header {
   color: black;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .warehouseBox__lower--leftContainer {
@@ -492,102 +492,5 @@
   width: 20vw;
   min-width: 100px;
   padding: 5px;
-}
-
-.warehouseDetailed {
-  background-color: #F7F7F7;
-  padding: 10px 40px;
-  left: 250px;
-  min-height: 92vh;
-  width: 85vw;
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (max-width: 1920px) {
-  .warehouseDetailed {
-    width: 80vw;
-  }
-}
-
-@media (max-width: 1420px) {
-  .warehouseDetailed {
-    width: 75vw;
-  }
-}
-
-@media (max-width: 1024px) {
-  .warehouseDetailed {
-    width: 70vw;
-  }
-}
-
-@media (max-width: 850px) {
-  .warehouseDetailed {
-    width: 65vw;
-  }
-}
-
-@media (max-width: 800px) {
-  .warehouseDetailed {
-    left: 180px;
-    width: 70vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .warehouseDetailed {
-    width: 65vw;
-  }
-}
-
-.warehouseDetailed__header {
-  padding: 15px 10px;
-  color: #004892;
-}
-
-.warehouseDetailed__box {
-  margin: 5px;
-  padding: 15px 5px;
-  border: #ADADAD thin solid;
-  border-radius: 3px;
-}
-
-.warehouseDetailed__box--description {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--lastOrder {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--orderedBy {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--refNum {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--category {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--quantity {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--location {
-  padding: 10px 5px;
-}
-
-.warehouseDetailed__box--stockStatus {
-  padding: 10px 5px;
 }
 /*# sourceMappingURL=styles.css.map */

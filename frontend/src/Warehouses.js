@@ -45,10 +45,15 @@ let warehouseList = this.state.warehouses;
                     <WarehouseChild 
                         wareState={this.state.warehouses}
                         key={index}
-                        warehouseId={warehouses.warehouse_id}
-                        warehouseAddress={warehouses.address}
-                        warehouseContact={warehouses.contact}
-                        warehouseType={warehouses.type}
+                        wareId={warehouses.warehouse_id}
+                        wareCity={warehouses.city}
+                        wareCountry={warehouses.country}
+                        wareAddress={warehouses.address_street}
+                        warePostalCode={warehouses.postal_code}
+                        wareManager={warehouses.manager_name}
+                        warePhone={warehouses.phone_num}
+                        wareType={warehouses.type}
+                        wareMail={warehouses.email}
                     /></Link>
                 })    
             }
