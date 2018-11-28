@@ -1,4 +1,5 @@
 import React from 'react';
+import WarehouseDetailChild from './WarehouseDetailChild';
 
 export default class WarehouseDetail extends React.Component {
 
@@ -8,10 +9,10 @@ export default class WarehouseDetail extends React.Component {
 
     componentDidMount(prevProps, prevState) {
         const baseUrl = 'http://localhost:8080';
-        let warehousesPath = '/warehouses';
-        let specificId = '/';
+        let warehousesPath = '/warehouses/';
+        let currId = this.props.warehouseId;
 
-        fetch(baseUrl + warehousesPath)
+        fetch(baseUrl + warehousesPath + currId)
            .then((response) => {
                return response.json();
            })
@@ -24,16 +25,29 @@ export default class WarehouseDetail extends React.Component {
     }
 
     render() {
-        // console.log(this.state.warehouseDetail);
-        return (
-            <div className="warehouseDetailed">
 
+        let wareObj = this.state.warehouseDetail;
+
+        return (
+        <div className="warehouseDetailed">
+            <div className="warehouseDetailed__header">
+                {'Warehouse number'+' '}{this.props.warehouseId}{' '+'holds:'+' '}
             </div>
+            {wareObj.map((warehouseDetail, index) => {
+                return <div key={index}>
+                    <WarehouseDetailChild 
+                        wareDetailState={this.state.warehouseDetail}
+                        key={index}
+                        warehouseDetail={warehouseDetail.warehouse_id}
+                        productName={warehouseDetail.name}
+                        prodDescription={warehouseDetail.description}
+                        prodLastOrder={warehouseDetail.last_ordered}
+                        prodCategory={warehouseDetail.category}
+                        stockStatus={warehouseDetail.status}
+                    /></div>
+                })    
+            }
+        </div>
         );
     }
 }
-
-/*
-set up state, an array
-
-*/

@@ -1,5 +1,4 @@
 import React from 'react';
-import WarehouseDetail from './WarehouseDetail';
 import WarehouseChild from './WarehouseChild';
 import { Link } from 'react-router-dom';
 
@@ -24,8 +23,6 @@ export default class Warehouses extends React.Component {
                console.log(err);
            })
     }
-
-    
     
     render() {
         
@@ -33,7 +30,15 @@ let warehouseList = this.state.warehouses;
 
         return (
 
-    <div className="warehouses">Locations
+    <div className="warehouses">
+        <div className="warehouses__header">
+            <h3 className="warehouses__header--upperLeft">
+            Locations
+            </h3>
+            <div className="warehouses__header--lowerRight">
+            Filter
+            </div>
+        </div>
         <div className="warehouses__grid">
             {warehouseList.map((warehouses, index) => {
                 return <Link key={index} to={`/warehouses/${warehouses.warehouse_id}`}>
