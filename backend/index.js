@@ -66,9 +66,14 @@ app.post('/warehouses/:id', (req, res) => {
     // Create a new object with data received in POST request 
     let newObject = {
         "warehouse_id": (Number(req.params.id)),
-        "address": req.body.address,
-        "contact": req.body.contact,
-        "type": req.body.type
+        "type": req.body.type,
+        "address_street": req.body.address_street,
+        "city": req.body.city,
+        "country": req.body.country,
+        "postal_code": req.body.postal_code,
+        "manager_name": req.body.manager_name,
+        "phone_num": req.body.phone_num,
+        "email": req.body.email
     }
 
     // If the data is malformed or if a field is missing, 
