@@ -16,25 +16,41 @@ export default class InventoryList extends React.Component {
     // Fetch all inventory list once component mounts:
     componentDidMount(prevProps, prevState) {
 
+        if (warehouseId !== undefined)
+        {
+            fetch(`baseUrl${ /warehouse/warehouseId}`)
+            .then(response => response.json())
+            .then(data => this.setState({inventory:data}))
+            .catch(err => {console.log(err)});
+        }
+
+        else
+        {
         fetch(baseUrl + inventoryListPath)
            .then((response) => {
                return response.json();
            })
            .then((data) => {
+
                return this.setState({inventory: data})
            })
            .catch( (err) => {
                console.log(err);
            })
-        
+        }
     }
 
     
 
     render() {
         console.log(this.state.inventory);
+
+       
         let inventoryArray = this.state.inventory;
-        
+        if(this.warehouseId === this.state.warehouse_id){
+           inventoryArray= this.state.inventory.filter(this.state.warehouse_id)
+
+        } 
         return (
             <div className="inventoryList__container">
                 <div className="inventoryList--heading-container">

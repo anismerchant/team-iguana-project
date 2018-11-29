@@ -14,8 +14,16 @@ email = react.createRef();
 inventoryType = react.createRef();
 
 class Modal extends Component {
+
+    state = {
+        isOpen: undefined
+    }
+
+    handleClose = (e) => {
+        this.setState({isOpen : false})
+    }
     submitHandler = (e,warhouseName,street,city,country,postCode,manager,phone, email,inventoryType) =>{
-        this.warehouseName.current.value === null ?alert('Enter warehouse name!'): warehouseName = this.warehouseName.current.value;
+        this.warehouseName.current.value === null ? alert('Enter warehouse name!'): warehouseName = this.warehouseName.current.value;
         this.street.current.value === null ? alert('Enter street name!'): street = this.street.current.value;
         this.city.current.value === null ? alert('Enter city name!'): city = this.city.current.value;
         this.country.current.value === null ? alert('Select a country!'): country = this.country.current.value;
@@ -26,18 +34,19 @@ class Modal extends Component {
         this.inventoryType === null ? alert('Select an inventory type!'): inventoryType = this.inventoryType.current.value;
         const body = {
             warehouseName: this.warehouseName,
-            street: this.street,
+            address_street: this.street,
             city: this.city,
             country:this.country,
-            postCode:this.postCode,
-            manager: this.manager,
-            phone:this.phone,
+            postal_code:this.postCode,
+            manager_name: this.manager,
+            phone_num:this.phone,
             email:this.email,
-            inventoryType: this.inventoryType
+            type: this.inventoryType
         }
         baseUrl = 'http://localhost:8080';
 
-        fetch(baseUrl$, {
+        fetch(`baseUrl${"warehouses/:id"}`, {
+
             method:"POST",
             headers:{"Content-Type" :"application/json"},
             body: JSON.stringify(body)
@@ -46,16 +55,16 @@ class Modal extends Component {
     render() {
         return (
             <div style={{...flex, display: this.props.isOpen ? 'flex' : 'none'}}>
-                <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}></div>
+                <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}>x</div>
                 <div className="form-container" style={formModal}>
                     <h1>Add a new storage location</h1>
-                    <form className="form" onSubmit={this.submitHandler}>
+                    <form className="formModal" onSubmit={this.submitHandler}>
                         <label>
                             Warehouse Name
                             <input type="text" name="warehouseNameInput" ref="warehouseName"/>
                         </label>
-                        <div className="form__wrapper">
-                            <div className="form__address">
+                        <div className="formModal__wrapper">
+                            <div className="formModal__address">
                                 <label>
                                     Street Number & name
                                     <input type="text" name="streetInput" ref="street"/>
@@ -81,7 +90,7 @@ class Modal extends Component {
                                     <input type="text" name="postalCodeInput" ref="postalCode"/>
                                 </label>
                             </div>
-                            <div className="form__contactInfo">
+                            <div className="formModal__contactInfo">
                                 <label>
                                     Warehouse Manager's Name
                                     <input type="text" name="managerNameInput" ref="managerName"/>
@@ -104,7 +113,7 @@ class Modal extends Component {
                                 </label>
                             </div>
                         </div>
-                        <input className="form__button" type="submit" value="Save Location"/>
+                        <input className="formModal__button" type="submit" value="Save Location"/>
                     </form>
                 </div>
             </div>

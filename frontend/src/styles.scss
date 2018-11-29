@@ -221,3 +221,25 @@ font-family: Avenir Next;
             }
         }
     }
+
+.fromModal{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+
+    &__wrapper{
+        display: flex;
+    }
+
+    &__address{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    &__contactInfo{
+        display:flex;
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+}
