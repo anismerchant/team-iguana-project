@@ -1,25 +1,19 @@
 @font-face {
   font-family: 'Avenir Next';
   src: local("Avenir Next"), url("./Assets/Typography/Avenir Next.ttc");
-  font-style: normal;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0%;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Avenir Next;
+  text-decoration: none;
 }
 
 .sidebar {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,7 +27,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
   background-color: #003B77;
 }
 
@@ -58,8 +52,9 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 250px;
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin-top: 2vh;
+  margin-bottom: 20vh;
+  opacity: 0.6;
 }
 
 .sidebar__links--label {
@@ -122,6 +117,10 @@ body {
   position: fixed;
 }
 
+.sidebar__links:hover {
+  opacity: 0.9;
+}
+
 .sidebar__bottomVersionText {
   color: white;
   font-weight: 400;
@@ -138,8 +137,14 @@ body {
           flex-direction: row;
   margin-left: 250px;
   padding-top: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   border: none;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    margin-left: 200px;
+  }
 }
 
 .topbar__searchBox {
@@ -156,7 +161,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .topbar__searchBox {
     margin-left: 10px;
   }
@@ -245,10 +250,23 @@ body {
 }
 
 .topbar__searchBox:hover {
-  margin-left: 70px;
+  font-family: AvenirNext-Regular;
+  margin-left: 120px;
   background-color: #F7F7F7;
   border-radius: 2px;
   border: #004892  solid medium;
+}
+
+@media (max-width: 1420px) {
+  .topbar__searchBox:hover {
+    margin-left: 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .topbar__searchBox:hover {
+    margin-left: 10px;
+  }
 }
 
 .topbar__searchBox:hover--input:hover {
@@ -259,6 +277,28 @@ body {
   border: none;
   outline: none;
   padding-left: 20px;
+}
+
+@media (max-width: 1024px) {
+  .topbar__searchBox:hover--input:hover {
+    width: 300px;
+    display: inline;
+  }
+}
+
+@media (max-width: 850px) {
+  .topbar__searchBox:hover--input:hover {
+    width: 200px;
+    display: inline;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar__searchBox:hover--input:hover {
+    max-width: 90px;
+    width: 90px;
+    display: inline;
+  }
 }
 
 .topbar__rightBox {
@@ -302,7 +342,13 @@ body {
   margin-right: 10px;
 }
 
-.fromModal {
+.warehouses {
+  background-color: #F7F7F7;
+  padding: 10px 40px;
+  left: 250px;
+  min-height: 92vh;
+  width: 85vw;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,18 +356,100 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.fromModal__wrapper {
+@media (max-width: 1920px) {
+  .warehouses {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 1420px) {
+  .warehouses {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .warehouses {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 850px) {
+  .warehouses {
+    width: 65vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .warehouses {
+    left: 180px;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .warehouses {
+    width: 65vw;
+  }
+}
+
+.warehouses__header {
+  margin: 30px 10px 10px 10px;
+}
+
+.warehouses__header--upperLeft {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.warehouses__header--lowerRight {
+  text-align: right;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #004892;
+}
+
+.warehouseBox {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: white;
+  border: #ADADAD thin solid;
+  border-radius: 3px;
+}
+
+.warehouseBox__upper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  color: #003B77;
+  padding: 10px;
 }
 
-.fromModal__address {
+.warehouseBox__lower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px;
+}
+
+.warehouseBox__lower--header {
+  color: black;
+  padding-bottom: 10px;
+}
+
+.warehouseBox__lower--leftContainer {
+  font-size: 12px;
+  color: #7C7C7C;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,12 +457,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 20vw;
+  min-width: 100px;
+  padding: 5px;
 }
 
-.fromModal__contactInfo {
+.warehouseBox__lower--centralContainer {
+  font-size: 12px;
+  color: #7C7C7C;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,8 +474,23 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  width: 20vw;
+  min-width: 140px;
+  padding: 5px;
+}
+
+.warehouseBox__lower--rightContainer {
+  font-size: 12px;
+  color: #7C7C7C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20vw;
+  min-width: 100px;
+  padding: 5px;
 }
 /*# sourceMappingURL=styles.css.map */
