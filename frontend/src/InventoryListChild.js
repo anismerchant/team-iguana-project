@@ -2,7 +2,16 @@ import React from 'react';
 
 export default class InvventoryListChild extends React.Component {
 
-    render() {
+// delInvItem = (e) => {
+//     // e.preventDefault();
+//     // let currentID = this.match.params.id;
+//     // console.log(currentID);
+//     console.log(this.props.delInvItem);
+// }
+
+    render() { 
+        // console.log(this.props.delInvItem);
+        // console.log(this.props.delInvItemFunction);
         return (
             <div className={`inventoryList__form--product-details ${this.props.className}`}>
                 <div className="inventoryList__form--product-details-group">
@@ -23,7 +32,9 @@ export default class InvventoryListChild extends React.Component {
                         <h3 className="inventoryList__form--in-stock">{this.props.productStatus}</h3>
                     </div>
                 </div>
-                <button className="inventoryList__form--delete-product">x</button>                        
+                <button onClick={() => this.props.delInvItemFunction(this.props.delInvItem)}
+                 
+                 className="inventoryList__form--delete-product">x</button>
             </div>
         )
     }

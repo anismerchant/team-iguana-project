@@ -26,13 +26,49 @@ export default class InventoryList extends React.Component {
            .catch( (err) => {
                console.log(err);
            })
-        
     }
 
-    
+    delInvItemFunction = (currentId) => {
+
+        console.log(currentId);
+        const init = {
+            method: "DELETE"
+        };
+
+        fetch(baseUrl + inventoryListPath + '/' + (currentId), init)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            // return this.setState({inventory: data})
+        })
+        .catch( (err) => {
+            console.log(err);
+        })
+
+
+    //         const init = {
+    //             method: "DELETE",
+    //             headers: {
+    //                 'content-type': 'application/json'
+    //             }
+    //         };
+    //         fetch(baseUrl + inventoryListPath + '/' + (currentId), init)
+
+    //         .then((response) => {
+    //             return response.json();
+    //         })
+    //         .then((data) => {
+    //             return this.setState({inventory: data})
+    //         })
+    //         .catch( (err) => {
+    //             console.log(err);
+    //         })
+    //     }
+    // }
+}
 
     render() {
-        console.log(this.state.inventory);
         let inventoryArray = this.state.inventory;
         
         return (
@@ -70,6 +106,7 @@ export default class InventoryList extends React.Component {
                     {inventoryArray.map((inventory, index) => {
                         return <Link key={index} to={`/inventory/${inventory.id}`}>
                             <InventoryListChild 
+                                delInvItemFunction={this.delInvItemFunction}
                                 inventoryState={this.state.inventory}
                                 key={index}
                                 className={(index % 2 === 1) ? "white" : "grey"}
@@ -83,6 +120,7 @@ export default class InventoryList extends React.Component {
                                 productQuantity={inventory.quantity}
                                 productLocation={inventory.location}
                                 productStatus={inventory.status}
+                                delInvItem={inventory.id}
                             /></Link>
                         })    
                     }
