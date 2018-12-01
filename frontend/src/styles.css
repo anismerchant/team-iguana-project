@@ -411,6 +411,24 @@
   color: #004892;
 }
 
+.warehouses__addButton {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  background-color: #004892;
+  border-radius: 100%;
+  -webkit-box-shadow: #000000 0 40px 121px 0;
+          box-shadow: #000000 0 40px 121px 0;
+  text-align: center;
+  bottom: 100px;
+  right: 200px;
+  padding: 21px 0;
+}
+
+.warehouses__addButton:hover {
+  background-color: #003B77;
+}
+
 .warehouseBox {
   margin-bottom: 15px;
   padding: 10px;
@@ -492,5 +510,122 @@
   width: 20vw;
   min-width: 100px;
   padding: 5px;
+}
+
+.form-container {
+  padding: 0 2.5rem;
+  overflow-y: auto;
+}
+
+.form-container h1 {
+  font-size: 16px;
+  padding: 2.5rem 0;
+}
+
+.formModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .formModal {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.formModal__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  .formModal__label {
+    margin: 0.5rem 0;
+  }
+}
+
+.formModal__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .formModal__wrapper {
+    display: block;
+    padding-bottom: 2.5rem;
+    margin-top: 3.5rem;
+  }
+}
+
+.formModal__address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.formModal__contactInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.formModal__field {
+  width: 255px;
+  height: 40px;
+  border: 1px solid #CACACA;
+  border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+  .formModal__field {
+    margin: 0.5rem 0;
+  }
+}
+
+.formModal__button {
+  background-color: #004892;
+  border-radius: 3px;
+  color: #ffffff;
+  border: none;
+  width: 131px;
+  height: 38px;
+}
+
+.formModal__button:hover {
+  background-color: #003B77;
 }
 /*# sourceMappingURL=styles.css.map */

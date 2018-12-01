@@ -15,7 +15,7 @@ export default class InventoryList extends React.Component {
 
     // Fetch all inventory list once component mounts:
     componentDidMount() {
-       const warehouseId = Number(this.props.warehouseId);
+       const warehouseId = this.props.warehouseId;
         if (warehouseId)
         {
             fetch(`${baseUrl}/warehouses/${warehouseId}`)

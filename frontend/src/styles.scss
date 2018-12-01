@@ -4,6 +4,11 @@
         url('./Assets/Typography/Avenir\ Next.ttc');
 }
 
+@mixin flex-column(){
+    display: flex;
+    flex-direction:column;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -300,6 +305,24 @@
     &__grid{
         
     }
+
+    &__addButton{
+        position: fixed;
+        width:65px;
+        height:65px;
+        background-color:#004892;
+        border-radius:100%;
+        box-shadow: #000000 0 40px 121px 0;
+        text-align: center;
+        bottom: 100px;
+        right: 200px;
+        padding: 21px 0;
+        &:hover{
+            background-color:#003B77;
+        }
+
+        
+        }
 }
 .warehouseBox{
 
@@ -357,6 +380,85 @@
             min-width: 100px;
             padding: 5px;
         }
-    }   
+    }
+      
 }
 
+.form-container{
+    padding: 0 2.5rem;
+    overflow-y:auto;
+
+    & h1{
+        font-size:16px;
+        padding:2.5rem 0;
+    }
+}
+
+.formModal{
+
+    @include flex-column();
+    justify-content: flex-start;
+    font-size:12px;
+    @media(max-width:600px){
+        align-items: center;
+    }
+
+    &__label{
+        
+        @include flex-column();
+        padding-bottom:1rem;
+        padding-top:0.5rem;
+        margin-right:1rem;
+
+        @media (max-width:600px){
+            margin: 0.5rem 0;
+        }
+    }
+    &__wrapper{
+        display: flex;
+        @media (max-width:600px){
+          
+            display: block;
+            padding-bottom: 2.5rem;
+            margin-top:3.5rem;
+        }
+    }
+
+    &__address{
+    
+        @include flex-column();
+        justify-content: flex-start;
+    }
+
+    &__contactInfo{
+        
+        @include flex-column();
+        justify-content: flex-start;
+
+       
+    }
+
+    &__field{
+        width: 255px;
+        height:40px;
+        border: 1px solid #CACACA;
+        border-radius: 2px;
+
+        @media (max-width:600px){
+        margin: 0.5rem 0;
+        }
+    }
+
+    &__button{
+        background-color: #004892;
+        border-radius: 3px;
+        color: #ffffff;
+        border: none;
+        width:131px;
+        height:38px;
+
+        &:hover{
+            background-color: #003B77;
+        }
+    }
+}

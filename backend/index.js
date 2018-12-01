@@ -80,17 +80,19 @@ app.post('/warehouses/:id', (req, res) => {
     //  return a 400 status, rejecting the POST request.
     
     // Solution One: Works
-    if (typeof req.body.address !== 'string' || req.body.address === null || req.body.address === '' || req.body.address === undefined || req.body.address === NaN) {
+    if (typeof req.body.address_street !== 'string' || req.body.address_street === null || req.body.address_street === '' || req.body.address_street === undefined || req.body.address_street === NaN) {
         return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked."); 
     } 
-    if (typeof req.body.contact !== 'string' || req.body.contact === null || req.body.contact === '' || req.body.contact === undefined || req.body.contact === NaN) {
+    if (typeof req.body.phone_num !== 'string' || req.body.phone_num === null || req.body.phone_num === '' || req.body.phone_num === undefined || req.body.phone_num === NaN) {
         return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked.");
     } 
     if (typeof req.body.type !== 'string' || req.body.type === null || req.body.type === '' || req.body.type === undefined || req.body.type === NaN) {
         return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked.");
     } 
     else {
-        return res.json(newObject);
+        console.log(newObject);
+        let newWarehouseList = warehouse_data.push(newObject)
+        return res.json(newWarehouseList);
     }
 
     // Solution Two: Doesn't work
