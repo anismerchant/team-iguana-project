@@ -493,30 +493,4 @@
   min-width: 100px;
   padding: 5px;
 }
-
-.inventoryList__container #deleteButton {
-  width: 10%;
-  font-size: 0.9rem;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  overflow: hidden;
-  outline: none;
-  opacity: .6;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
-}
-
-.inventoryList__container #deleteButton:focus {
-  outline: 0;
-}
-
-.inventoryList__container #deleteButton:hover {
-  opacity: 1;
-  text-shadow: 0 0 1px #f70d5b;
-  -webkit-transform: scale(1.08);
-          transform: scale(1.08);
-}
 /*# sourceMappingURL=styles.css.map */

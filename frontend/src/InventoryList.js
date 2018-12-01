@@ -1,6 +1,5 @@
 import React from 'react';
 import InventoryListChild from './InventoryListChild';
-// import { Link } from 'react-router-dom';
 
 /* setup const for baseUrl and inventory path */
 const baseUrl = 'http://localhost:8080';
@@ -28,9 +27,9 @@ export default class InventoryList extends React.Component {
            })
     }
 
+    // Function that sends DELETE to the backend, and receives an updated inventory list in json, and then updates state
     delInvItemFunction = (currentId) => {
 
-        console.log(currentId);
         const init = {
             method: "DELETE"
         };
