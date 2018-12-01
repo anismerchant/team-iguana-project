@@ -1,6 +1,6 @@
 import React from 'react';
 import InventoryListChild from './InventoryListChild';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 /* setup const for baseUrl and inventory path */
 const baseUrl = 'http://localhost:8080';
@@ -40,32 +40,12 @@ export default class InventoryList extends React.Component {
             return response.json();
         })
         .then((data) => {
-            // return this.setState({inventory: data})
+            return this.setState({inventory: data})
         })
         .catch( (err) => {
             console.log(err);
         })
 
-
-    //         const init = {
-    //             method: "DELETE",
-    //             headers: {
-    //                 'content-type': 'application/json'
-    //             }
-    //         };
-    //         fetch(baseUrl + inventoryListPath + '/' + (currentId), init)
-
-    //         .then((response) => {
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             return this.setState({inventory: data})
-    //         })
-    //         .catch( (err) => {
-    //             console.log(err);
-    //         })
-    //     }
-    // }
 }
 
     render() {
@@ -104,9 +84,8 @@ export default class InventoryList extends React.Component {
                     </div>
                     {/* PRODUCT DETAILS RECEIVED AS PROPS FROM PARENT */}    
                     {inventoryArray.map((inventory, index) => {
-                        return <Link key={index} to={`/inventory/${inventory.id}`}>
-                            <InventoryListChild 
-                                delInvItemFunction={this.delInvItemFunction}
+                        return <InventoryListChild 
+                                productId={inventory.id}
                                 inventoryState={this.state.inventory}
                                 key={index}
                                 className={(index % 2 === 1) ? "white" : "grey"}
@@ -120,8 +99,9 @@ export default class InventoryList extends React.Component {
                                 productQuantity={inventory.quantity}
                                 productLocation={inventory.location}
                                 productStatus={inventory.status}
+                                delInvItemFunction={this.delInvItemFunction}
                                 delInvItem={inventory.id}
-                            /></Link>
+                            />
                         })    
                     }
                 </div>
