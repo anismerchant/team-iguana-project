@@ -5,10 +5,9 @@ export default class WarehouseChild extends React.Component {
     render() {
         return (
         <div className="warehouseBox">
-            <h3 className="warehouseBox__upper">{'Warehouse Number' + ' '}
-            
+            <h3 className="warehouseBox__upper">
+            {'Warehouse Number '}
             {this.props.wareId}
-
             </h3>
             <div className="warehouseBox__lower">
                 <div className="warehouseBox__lower--leftContainer">

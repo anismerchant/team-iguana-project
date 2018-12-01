@@ -17,7 +17,7 @@ export default class ProductDetail extends React.Component {
             .then ((response) => {
                 return response.json();
             }).then((data) => {
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     inventoryObject: data,
               })
@@ -33,7 +33,7 @@ export default class ProductDetail extends React.Component {
     render() {
 
         let prodObj = this.state.inventoryObject;
-        console.log(prodObj);
+        // console.log(prodObj);
 
         return (
 

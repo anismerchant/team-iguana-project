@@ -1,13 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default class InvventoryListChild extends React.Component {
+export default class InventoryListChild extends React.Component {
 
-    render() {
+    render() { 
+
         return (
             <div className={`inventoryList__form--product-details ${this.props.className}`}>
                 <div className="inventoryList__form--product-details-group">
                     <div className="inventoryList__form--product-name-container">
-                        <h3  className="inventoryList__form--product">{this.props.productName}</h3>
+                        <Link to={'/inventory/' + this.props.productId}><h3  className="inventoryList__form--product">{this.props.productName}</h3></Link>
                         <h3 className="inventoryList__form--product-desc">{this.props.productDesc}</h3>
                     </div>
                     <div className="inventoryList__form--date-container">
@@ -22,8 +24,10 @@ export default class InvventoryListChild extends React.Component {
                     <div className="inventoryList__form--quantity-in-stock-container">
                         <h3 className="inventoryList__form--in-stock">{this.props.productStatus}</h3>
                     </div>
+                    <button onClick={() => this.props.delInvItemFunction(this.props.delInvItem)}
+                 
+                 className="inventoryList__form--delete-product">x</button>
                 </div>
-                <button className="inventoryList__form--delete-product">x</button>                        
             </div>
         )
     }

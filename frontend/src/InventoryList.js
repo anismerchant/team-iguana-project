@@ -1,6 +1,5 @@
 import React from 'react';
 import InventoryListChild from './InventoryListChild';
-import { Link } from 'react-router-dom';
 
 /* setup const for baseUrl and inventory path */
 const baseUrl = 'http://localhost:8080';
@@ -26,13 +25,29 @@ export default class InventoryList extends React.Component {
            .catch( (err) => {
                console.log(err);
            })
-        
     }
 
-    
+    // Function that sends DELETE to the backend, and receives an updated inventory list in json, and then updates state
+    delInvItemFunction = (currentId) => {
+
+        const init = {
+            method: "DELETE"
+        };
+
+        fetch(baseUrl + inventoryListPath + '/' + (currentId), init)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            return this.setState({inventory: data})
+        })
+        .catch( (err) => {
+            console.log(err);
+        })
+
+}
 
     render() {
-        console.log(this.state.inventory);
         let inventoryArray = this.state.inventory;
         
         return (
@@ -68,8 +83,8 @@ export default class InventoryList extends React.Component {
                     </div>
                     {/* PRODUCT DETAILS RECEIVED AS PROPS FROM PARENT */}    
                     {inventoryArray.map((inventory, index) => {
-                        return <Link key={index} to={`/inventory/${inventory.id}`}>
-                            <InventoryListChild 
+                        return <InventoryListChild 
+                                productId={inventory.id}
                                 inventoryState={this.state.inventory}
                                 key={index}
                                 className={(index % 2 === 1) ? "white" : "grey"}
@@ -83,7 +98,9 @@ export default class InventoryList extends React.Component {
                                 productQuantity={inventory.quantity}
                                 productLocation={inventory.location}
                                 productStatus={inventory.status}
-                            /></Link>
+                                delInvItemFunction={this.delInvItemFunction}
+                                delInvItem={inventory.id}
+                            />
                         })    
                     }
                 </div>

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const inventory_list_data = require('./inventory_list_data.json');
+let inventory_list_data = require('./inventory_list_data.json');
 const warehouse_data = require('./warehouse_data.json');
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -110,9 +110,16 @@ app.post('/warehouses/:id', (req, res) => {
 });
 
 
-// TODO: DELETE Item
+// DELETE Item
 
-
+// set up a DELETE route for the path '/inventory/:id/
+app.delete('/inventory/:id', (req,res) => {
+    const delItem = Number(req.params.id);
+    let itemList = inventory_list_data.filter(item => item.id !== delItem);
+    inventory_list_data = itemList;
+    res.json(itemList);
+    console.log("Delete triggered");
+});
 
 // Server Listening...
 app.listen(8080, () => {
