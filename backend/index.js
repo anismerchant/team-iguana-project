@@ -90,7 +90,6 @@ app.post('/warehouses/:id', (req, res) => {
         return res.status(400).send("404 Status Error. Opps, something went wrong. Please be sure no fields are left empty and only enter what's asked.");
     } 
     else {
-        console.log(newObject);
         let newWarehouseList = warehouse_data.push(newObject)
         return res.json(newWarehouseList);
     }
