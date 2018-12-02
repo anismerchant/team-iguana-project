@@ -1,110 +1,135 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const countryList = require('country-list');
-countryName = countryList.getName();
-warehouseName = React.createRef();
-street = react.creatRef();
-city = react.createRef();
-country = react.createRef();
-postalCode = react.createRef();
-managerName = react.createRef();
-phone = react.createRef();
-email = react.createRef();
-inventoryType = react.createRef();
+let countryName = countryList.getNames();
 
-class Modal extends Component {
-    submitHandler = (e,warhouseName,street,city,country,postCode,manager,phone, email,inventoryType) =>{
-        this.warehouseName.current.value === null ?alert('Enter warehouse name!'): warehouseName = this.warehouseName.current.value;
-        this.street.current.value === null ? alert('Enter street name!'): street = this.street.current.value;
-        this.city.current.value === null ? alert('Enter city name!'): city = this.city.current.value;
-        this.country.current.value === null ? alert('Select a country!'): country = this.country.current.value;
-        this.postalCode.current.value === null ? alert('Enter postal code!'): postCode = this.postalCode.current.value;
-        this.managerName.current.value === null ? alert("Enter mananger's name"): manager = this.managerName.current.value;
-        this.phone.current.value === null ? alert('Enter phone number!'): phone = this.phone.current.value;
-        this.email.current.value === null ? alert('Enter email address!'): email = this.email.current.value;
-        this.inventoryType === null ? alert('Select an inventory type!'): inventoryType = this.inventoryType.current.value;
+class Modal extends React.Component {
+    warehouseName = React.createRef();
+    street = React.createRef();
+    city = React.createRef();
+    country = React.createRef();
+    postalCode = React.createRef();
+    managerName = React.createRef();
+    phone = React.createRef();
+    email = React.createRef();
+    inventoryType = React.createRef();
+    
+    
+    handleClose = (e) => {
+        this.props.handleClose();
+    }
+
+    idMaker = (e) => {
+        this.props.idMaker();
+    }
+
+    fetchRequest = (e) => {
+        this.props.fetchRequest();
+    }
+    
+    submitHandler = (e) =>{
+        let warehouseName,street,city,country,postalCode,managerName,phone,email,inventoryType;
+
+        e.preventDefault();
+        this.warehouseName.current.value.length === 0 ? alert('Enter warehouse name!'):  warehouseName = this.warehouseName.current.value;
+        this.street.current.value.length === 0 ? alert('Enter street name!'): street = this.street.current.value;
+        this.city.current.value.length === 0 ? alert('Enter city name!'): city = this.city.current.value;
+        this.country.current.value.length === 0 ? alert('Select a country!'): country = this.country.current.value;
+        this.postalCode.current.value.length === 0 ? alert('Enter postal code!'): postalCode = this.postalCode.current.value;
+        this.managerName.current.value.length === 0 ? alert("Enter mananger's name"): managerName = this.managerName.current.value;
+        this.phone.current.value.length === 0 ? alert('Enter phone number!'): phone = this.phone.current.value;
+        this.email.current.value.length === 0 ? alert('Enter email address!'): email = this.email.current.value;
+        this.inventoryType.current.value.length === 0 ? alert('Enter inventory type!'): inventoryType = this.inventoryType.current.value;
+        const id = this.props.idMaker;
+        
         const body = {
-            warehouseName: this.warehouseName,
-            street: this.street,
-            city: this.city,
-            country:this.country,
-            postCode:this.postCode,
-            manager: this.manager,
-            phone:this.phone,
-            email:this.email,
-            inventoryType: this.inventoryType
+            warehouseName: warehouseName,
+            address_street: street,
+            city: city,
+            country: country,
+            postal_code:postalCode,
+            manager_name: managerName,
+            phone_num: phone,
+            email: email,
+            type: inventoryType,
+            warehouse_id: id
         }
-        baseUrl = 'http://localhost:8080';
+        const baseUrl = 'http://localhost:8080';
 
-        fetch(baseUrl$, {
+        fetch(`${baseUrl}/warehouses/${id}`, {
+
             method:"POST",
             headers:{"Content-Type" :"application/json"},
             body: JSON.stringify(body)
-        })
+        });
+
+        this.props.handleClose();
+
     }
     render() {
         return (
             <div style={{...flex, display: this.props.isOpen ? 'flex' : 'none'}}>
-                <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}></div>
+                <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}>
+                    <img src="/Assets/Icons/Close.svg"/></div>
                 <div className="form-container" style={formModal}>
                     <h1>Add a new storage location</h1>
-                    <form className="form" onSubmit={this.submitHandler}>
-                        <label>
+                    <form className="formModal" onSubmit={this.submitHandler}>                       
+                        <label className="formModal__label">
                             Warehouse Name
-                            <input type="text" name="warehouseNameInput" ref="warehouseName"/>
+                            <input className="formModal__field" type="text" name="warehouseNameInput" ref={this.warehouseName}/>
                         </label>
-                        <div className="form__wrapper">
-                            <div className="form__address">
-                                <label>
+                        <div className="formModal__wrapper">
+                            <div className="formModal__address">
+                            Address
+                                <label className="formModal__label">
                                     Street Number & name
-                                    <input type="text" name="streetInput" ref="street"/>
+                                    <input className="formModal__field" type="text" name="streetInput" ref={this.street}/>
                                 </label>
-                                <label>
+                                <label className="formModal__label">
                                     City
-                                    <input type="text" name="cityInput" ref="city"/>
+                                    <input className="formModal__field" type="text" name="cityInput" ref={this.city}/>
                                 </label>
-                                <label>
+                                <label className="formModal__label">
                                     Country
-                                    <select name="country" ref="country">
+                                    <select className="formModal__field" name="country" ref={this.country} >
                                         {
-                                            countryName.map(country =>{
-                                                <option>
-                                                    {country}
+                                             countryName.map((country,i) =>{
+                                                return(
+                                                <option key={i}>
+                                                     {country}
                                                 </option>
+                                             )
                                             })
                                         }
                                     </select>
                                 </label>
-                                <label>
+                                <label className="formModal__label">
                                     Postal Code
-                                    <input type="text" name="postalCodeInput" ref="postalCode"/>
+                                    <input className="formModal__field" type="text" name="postalCodeInput" ref={this.postalCode}/>
                                 </label>
                             </div>
-                            <div className="form__contactInfo">
-                                <label>
+                            <div className="formModal__contactInfo">
+                            Contact Information
+                                <label className="formModal__label">
                                     Warehouse Manager's Name
-                                    <input type="text" name="managerNameInput" ref="managerName"/>
+                                    <input className="formModal__field" type="text" name="managerNameInput" ref={this.managerName}/>
                                 </label>
-                                <label>
+                                <label className="formModal__label">
                                     Phone Number
-                                    <input type="text" name="PhoneInput" ref="phone"/>
+                                    <input className="formModal__field" type="text" name="PhoneInput" ref={this.phone}/>
                                 </label>
-                                <label>
+                                <label className="formModal__label">
                                     Email Address
-                                    <input type="text" name="emailInput" ref="email"/>
+                                    <input  className="formModal__field" type="text" name="emailInput" ref={this.email}/>
                                 </label>
-                                <label>
+                                <label className="formModal__label">
                                     Inventory type
-                                    <select name="InventoryTypeInput" ref="inventorytype">
-                                        <option></option>
-                                        <option></option>
-                                        <option></option>
-                                    </select>
+                                    <input className="formModal__field" type="text" name="InventoryTypeInput" ref={this.inventoryType}/>                                      
                                 </label>
                             </div>
+                            <input className="formModal__button" type="submit" value="Save Location"/>
                         </div>
-                        <input className="form__button" type="submit" value="Save Location"/>
                     </form>
                 </div>
             </div>
@@ -129,6 +154,8 @@ const flex = {
     zIndex: 1,
     overflow: 'hidden',
     backgroundColor: 'rgba(57,57,57,0.6)',
+    top: '0',
+    left:'0'
 };
 
 const modalLayer = {
@@ -136,7 +163,9 @@ const modalLayer = {
     width: '100vw',
     height: '100vh',
     zIndex: 1,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    top: '0',
+    left:'0'
   };
   
   const formModal = {
