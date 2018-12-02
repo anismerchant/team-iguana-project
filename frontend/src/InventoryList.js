@@ -13,18 +13,30 @@ export default class InventoryList extends React.Component {
     }
 
     // Fetch all inventory list once component mounts:
-    componentDidMount(prevProps, prevState) {
+    componentDidMount() {
+       const warehouseId = this.props.warehouseId;
+        if (warehouseId)
+        {
+            fetch(`${baseUrl}/warehouses/${warehouseId}`)
+            .then(response => response.json())
+            .then(data => this.setState({inventory:data}))
+            .catch(err => {console.log(err)});
+        }
 
+        else
+        {
         fetch(baseUrl + inventoryListPath)
            .then((response) => {
                return response.json();
            })
            .then((data) => {
+
                return this.setState({inventory: data})
            })
            .catch( (err) => {
                console.log(err);
            })
+        }
     }
 
     // Function that sends DELETE to the backend, and receives an updated inventory list in json, and then updates state
@@ -48,6 +60,7 @@ export default class InventoryList extends React.Component {
 }
 
     render() {
+      
         let inventoryArray = this.state.inventory;
         
         return (
