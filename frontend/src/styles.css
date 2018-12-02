@@ -628,4 +628,11 @@
 .formModal__button:hover {
   background-color: #003B77;
 }
+
+@media (max-width: 600px) {
+  .formModal__button {
+    position: absolute;
+    bottom: -555px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
