@@ -48,7 +48,7 @@ export default class Warehouses extends React.Component {
   
     componentDidUpdate(prevProps, prevState)
     {
-        if(prevState.warehouses != this.state.warehouses)
+        if(prevState.warehouses !== this.state.warehouses)
         {
             this.fetchRequest();
         }
@@ -98,7 +98,7 @@ export default class Warehouses extends React.Component {
                 fetchRequest = {this.fetchRequest} />
 
         <div className="warehouses__addButton">
-            <img src="/Assets/Icons/add.svg" onClick ={this.handleClose} />
+            <img src="/Assets/Icons/add.svg" alt="Add button" onClick ={this.handleClose} />
             
         </div>
     </div>
