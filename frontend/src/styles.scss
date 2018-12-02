@@ -450,7 +450,7 @@
     }
 
     &__button{
-        background-color: #004892;
+       background-color: #004892;
         border-radius: 3px;
         color: #ffffff;
         border: none;
@@ -459,6 +459,10 @@
 
         &:hover{
             background-color: #003B77;
+        }
+        @media (max-width:600px){
+            position: absolute;
+            bottom: -555px;
         }
     }
 }

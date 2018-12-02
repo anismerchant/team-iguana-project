@@ -71,7 +71,7 @@ class Modal extends React.Component {
         return (
             <div style={{...flex, display: this.props.isOpen ? 'flex' : 'none'}}>
                 <div className='modal-layer' onClick={this.props.handleClose} style={modalLayer}>
-                    <img src="/Assets/Icons/Close.svg"/></div>
+                    <img src="/Assets/Icons/Close.svg" alt='close' /></div>
                 <div className="form-container" style={formModal}>
                     <h1>Add a new storage location</h1>
                     <form className="formModal" onSubmit={this.submitHandler}>                       
@@ -128,8 +128,8 @@ class Modal extends React.Component {
                                     <input className="formModal__field" type="text" name="InventoryTypeInput" ref={this.inventoryType}/>                                      
                                 </label>
                             </div>
-                            <input className="formModal__button" type="submit" value="Save Location"/>
                         </div>
+                        <input className="formModal__button" type="submit" value="Save Location"/>
                     </form>
                 </div>
             </div>
