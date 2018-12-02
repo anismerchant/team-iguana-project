@@ -52,10 +52,6 @@
         background: #FFF;
         border: 1px solid #DEDEDE;
 
-        a {
-            text-decoration: none;
-        }
-
         .inventoryList__form--product-heading {
             display: flex;
             justify-content: space-around;
@@ -88,12 +84,11 @@
                 width: 10%;
             }
         }
-        a {
-            .grey {
-                background-color: $lightgrey-color;
-            }
+        
+        .grey {
+            background-color: $lightgrey-color;
         }
-
+        
         .inventoryList__form--product-details {
             display: flex;
             justify-content: space-around;

@@ -24,10 +24,9 @@ export default class InventoryListChild extends React.Component {
                     <div className="inventoryList__form--quantity-in-stock-container">
                         <h3 className="inventoryList__form--in-stock">{this.props.productStatus}</h3>
                     </div>
-                    <button onClick={() => this.props.delInvItemFunction(this.props.delInvItem)}
-                 
-                 className="inventoryList__form--delete-product">x</button>
                 </div>
+                <button onClick={() => this.props.delInvItemFunction(this.props.delInvItem)}
+                 className="inventoryList__form--delete-product">x</button>
             </div>
         )
     }
