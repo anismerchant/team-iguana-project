@@ -40,7 +40,7 @@ export default class ProductDetail extends React.Component {
             <div className="productDetail">
                 <div className="invRecordsNav">
                     <div className="backLink">
-                        <Link to={"/inventory"}><img src="../Assets/Icons/Back Arrow.svg" alt="back arrow" />Back</Link>
+                        <Link to={"/inventory"}><img src="../Assets/Icons/Back Arrow.svg" alt="back arrow" />Back to All Inventory</Link>
                     </div>
                 </div>
                 <div className="invRecords">
