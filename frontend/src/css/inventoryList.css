@@ -69,10 +69,6 @@
   border: 1px solid #DEDEDE;
 }
 
-.inventoryList__container .inventoryList--main-container a {
-  text-decoration: none;
-}
-
 .inventoryList__container .inventoryList--main-container .inventoryList__form--product-heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,7 +113,7 @@
   width: 10%;
 }
 
-.inventoryList__container .inventoryList--main-container a .grey {
+.inventoryList__container .inventoryList--main-container .grey {
   background-color: #F7F7F7;
 }
 
