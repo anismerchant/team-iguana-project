@@ -25,7 +25,6 @@ class Sidebar extends Component {
                         <label className="sidebar__links--label">
                             <img src="../Assets/Icons/User.svg" className="sidebar__links--img"
                             alt='linkImg'/>
-                            <Link to={'/inventory'} className="sidebar__links--link" />
                         Users</label>
                     </form>
                     <div className="sidebar__bottomVersionText">Version 1.0</div>
