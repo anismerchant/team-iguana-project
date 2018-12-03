@@ -41,9 +41,18 @@
     min-height: 100vh;
     background-color: #003B77;
     font-family: $inventory-font-family;
-    @media (max-width: 800px)
+    @media (max-width: 1300px)
     {
     width: 180px;
+    }
+    @media (max-width: 800px)
+    {
+    width: 100px;
+    }
+    @media (max-width: 540px)
+    {
+    width: 40px;
+    font-size: 0;
     }
 
     &__LogoLinkBox{
@@ -52,6 +61,11 @@
             margin-top: 30px;
             height: 13px;
             width: 93px;
+            @media (max-width: 540px)
+            {
+            transform: rotate(270deg);
+            margin-top: 50px;
+            }
         }
     }
 
@@ -74,9 +88,18 @@
             font-family: Avenir Next;
             color: #CACACA;
             background-color: #003B77;
-            @media (max-width: 800px)
+            @media (max-width: 1300px)
             {
             width: 180px;
+            }
+            @media (max-width: 800px)
+            {
+            width: 100px;
+            }
+            @media (max-width: 540px)
+            {
+            width: 40px;
+            font-size: 0;
             }
         }
         &--label:hover{
@@ -88,9 +111,18 @@
             font-family: Avenir Next;
             color: #FFFFFF;
             background-color: #004892;
-            @media (max-width: 800px)
+            @media (max-width: 1300px)
             {
             width: 180px;
+            }
+            @media (max-width: 800px)
+            {
+            width: 100px;
+            }
+            @media (max-width: 540px)
+            {
+            width: 40px;
+            font-size: 0;
             }
         }
 
@@ -98,12 +130,20 @@
             margin: 0 30px 0 30px;
             height: 24px;
             width: 24px;
+            @media (max-width: 800px)
+            {
+            margin: 0 5px 0 5px;
+            }
         }
 
         &--img:hover{
             margin: 0 30px 0 30px;
             height: 24px;
             width: 24px;
+            @media (max-width: 800px)
+            {
+            margin: 0 5px 0 5px;
+            }
         }
 
             &--link {
@@ -121,6 +161,10 @@
         color: white;
         font-size: 12px;
         margin: 40px;
+        @media (max-width: 540px)
+        {
+        font-size: 0;
+        }
     }
 }
 
@@ -135,7 +179,15 @@
     border: none;
     @media (max-width: 700px)
     {
-    margin-left: 200px;
+    margin-left: 130px;
+    }
+    @media (max-width: 500px)
+    {
+    margin-left: 80px;
+    }
+    @media (max-width: 300px)
+    {
+    margin-left: 50px;
     }
 
     &__searchBox{
@@ -174,6 +226,12 @@
             {
             max-width: 90px;
             width: 90px;
+            display: inline;
+            }
+            @media (max-width: 500px)
+            {
+            max-width: 70px;
+            width: 70px;
             display: inline;
             }
         }
@@ -236,6 +294,12 @@
             width: 90px;
             display: inline;
             }
+            @media (max-width: 500px)
+            {
+            max-width: 70px;
+            width: 70px;
+            display: inline;
+            }
         }
     }
 
@@ -290,6 +354,10 @@
     {
     width: 75vw;
     }
+    @media (max-width: 1300px)
+    {
+    left: 180px;
+    }
     @media (max-width: 1024px)
     {
     width: 70vw;
@@ -300,12 +368,16 @@
     }
     @media (max-width: 800px)
     {
-    left: 180px;
+    left: 100px;
     width: 70vw;
     }
     @media (max-width: 600px)
     {
     width: 65vw;
+    }
+    @media (max-width: 540px)
+    {
+    left: 40px;
     }
     &__header{
         margin: 30px 10px 10px 10px;
