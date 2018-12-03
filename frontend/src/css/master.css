@@ -49,6 +49,7 @@
           justify-content: space-between;
   min-height: 100vh;
   background-color: #003B77;
+  font-family: "Avenir Next", sans-serif;
 }
 
 @media (max-width: 800px) {
@@ -144,7 +145,6 @@
 .sidebar__bottomVersionText {
   color: white;
   font-size: 12px;
-  font-weight: 400;
   margin: 40px;
 }
 
@@ -365,11 +365,6 @@
 }
 
 .warehouses {
-  background-color: #F7F7F7;
-  padding: 10px 40px;
-  left: 250px;
-  min-height: 92vh;
-  width: 85vw;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,6 +373,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #F7F7F7;
+  padding: 10px 40px;
+  left: 250px;
+  min-height: 93vh;
+  width: 85vw;
 }
 
 @media (max-width: 1920px) {
