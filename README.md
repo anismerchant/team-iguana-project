@@ -1,6 +1,6 @@
-# Team Iguana Project Overview 
+# Project Ten: Collaborative
 
-* Built Warehouse Inventory and Tracking Application
-* Tech Stack: React, Node/Express, HTML/SCSS/BEM
+* Built a warehouse inventory and tracking application
+* Technology Stack: React, Node/Express, HTML/SCSS/BEM
 * Collaborated via JIRA
-* Team Members: Anis Merchant, George Izraelian, Meera Shah, Pouyan Zarbafian
+* Team Iguana Members: Anis Merchant, George Izraelian, Meera Shah, Pouyan Zarbafian
