@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './css/master.css';
-import TopBar from './TopBar';
-import Sidebar from './Sidebar';
-import InventoryList from './InventoryList';
-import Warehouses from './Warehouses';
-import ProductDetail from './ProductDetail';
+import TopBar from './components/TopBar';
+import Sidebar from './components/Sidebar';
+import InventoryList from './components/InventoryList';
+import Warehouses from './components/Warehouses';
+import ProductDetail from './components/ProductDetail';
 import { BrowserRouter as Router, Route, Switch, Redirect,} from 'react-router-dom';
 
 export default class App extends Component {
