@@ -105,7 +105,7 @@ export default class InventoryList extends React.Component {
                                 productWarehouseId={inventory.warehouse_id}
                                 productDesc={inventory.short_description}
                                 productLastOrdered={inventory.last_ordered}
-                                productOrderedBy={inventory["ordered by"]}
+                                productOrderedBy={inventory.ordered_by}
                                 productRefNum={inventory.refNum}
                                 productCategory={inventory.category}
                                 productQuantity={inventory.quantity}
