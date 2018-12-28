@@ -4,9 +4,9 @@
 * Single-page, dynamic warehouse inventory and tracking application, which displays upon user request: 
   * A list of total inventory items; 
   * A list of total available warehouses; 
+  * A list of available items at a specific warehouse;
   * Individual inventory items;
-  * Warehouse locations; 
-  * A list of available items at a specific warehouse.    
+  * Warehouse locations.     
 
 ### TECHNOLOGY STACK
 
